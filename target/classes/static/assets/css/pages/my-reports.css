@@ -1,0 +1,18 @@
+.topbar .sub{ font-size:13px; color:var(--ink-70); margin-top:3px; }
+.stat-strip{ grid-template-columns:repeat(5,1fr); margin-bottom:36px; }
+.stat-mini.accent{ background:var(--harbor); color:#fff; border-color:var(--harbor); }
+.stat-mini.accent .lbl{ color:#DFEFEE; }
+
+.filter-bar{ justify-content:flex-start; }
+.filter-bar input{ padding:10px 14px; font-size:13.5px; width:240px; }
+.sec-head{ margin:36px 0 16px; }
+.sec-head h2{ font-size:17px; }
+
+.report-row{ cursor:pointer; }
+.report-row:hover{ border-color:var(--harbor); }
+.report-row .info .desc{ font-size:12.5px; color:var(--ink-70); margin-top:6px; max-width:44ch; }
+.report-row .right{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.chat-link{ font-size:12px; color:var(--harbor-dark); font-weight:600; }
+.appeal-btn{ font-size:12px; font-weight:600; color:#fff; background:var(--brick); padding:6px 12px; border-radius:6px; border:none; cursor:pointer; }
+
+/* Responsive override for .report-row now lives in assets/css/responsive.css. */

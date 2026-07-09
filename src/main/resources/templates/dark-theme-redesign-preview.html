@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Theme Redesign — Preview (not yet applied)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/pages/dark-theme-redesign-preview.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Proposal · Not applied to any live page yet</div>
+    <h1>Dark theme, take two</h1>
+    <p>The current dark mode leans on a navy-tinted background and borders, so everything reads as "blue on blue." This version keeps the same brand navy for the sidebar and hero bands, but swaps the page background, cards, and borders to a neutral charcoal — so the teal/amber/green accents actually pop instead of blending in.</p>
+    <div class="flag">Approve this and I'll roll it into every page's dark theme</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2 class="section-title">Palette: old vs. new</h2>
+    <p class="section-desc">Same brand navy and teal accent — only the neutrals (background, cards, borders) change.</p>
+    <div class="compare-grid">
+      <div class="compare-col old">
+        <h3>Current — navy-tinted</h3>
+        <div class="swatch-row"><div class="chip" style="background:#10161F"></div><div><div class="name">Page background</div><div class="hex">#10161F</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#1A222E"></div><div><div class="name">Card surface</div><div class="hex">#1A222E</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#26303C"></div><div><div class="name">Border</div><div class="hex">#26303C</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#384352"></div><div><div class="name">Border (strong)</div><div class="hex">#384352</div></div></div>
+      </div>
+      <div class="compare-col new">
+        <h3>Proposed — neutral charcoal</h3>
+        <div class="swatch-row"><div class="chip" style="background:#17181B"></div><div><div class="name">Page background</div><div class="hex">#17181B</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#202126"></div><div><div class="name">Card surface</div><div class="hex">#202126</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#2C2D31"></div><div><div class="name">Border</div><div class="hex">#2C2D31</div></div></div>
+        <div class="swatch-row"><div class="chip" style="background:#3D3E44"></div><div><div class="name">Border (strong)</div><div class="hex">#3D3E44</div></div></div>
+      </div>
+    </div>
+    <div class="verdict"><b>What changed:</b> removed the blue undertone from every neutral (background/card/border). Sidebar and hero bands stay exactly the same brand navy they already are — that's intentional, it's the one place navy should still show up.</div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Components in the new palette</h2>
+    <p class="section-desc">Everything below is rendered live using the proposed variables — not a mockup image.</p>
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <h4>Buttons</h4>
+        <button class="btn btn-primary">Submit report</button>
+        <button class="btn btn-secondary">Save draft</button>
+        <button class="btn btn-danger">Delete</button>
+      </div>
+
+      <div class="comp-card">
+        <h4>Status stamps</h4>
+        <span class="stamp new">New</span>
+        <span class="stamp pending">Investigating</span>
+        <span class="stamp resolved">Resolved</span>
+        <span class="stamp urgent">Urgent</span>
+      </div>
+
+      <div class="comp-card">
+        <h4>Form inputs</h4>
+        <div class="field"><label>Company email</label><input type="email" placeholder="you@company.com"></div>
+        <div class="field"><label>Category</label><select><option>Workplace Harassment</option><option>Fraud</option></select></div>
+      </div>
+
+      <div class="comp-card">
+        <h4>Report rows</h4>
+        <div class="report-row"><div><div class="cat">Harassment</div><h5>Late-night messages from manager</h5></div><span class="stamp pending">Investigating</span></div>
+        <div class="report-row"><div><div class="cat">Fraud</div><h5>Expense discrepancies</h5></div><span class="stamp new">New</span></div>
+      </div>
+
+      <div class="comp-card">
+        <h4>Anonymous chat</h4>
+        <div class="bubble them">Could you share the screenshot you mentioned?</div>
+        <div class="bubble me">Just added it — let me know if you need anything else.</div>
+      </div>
+
+      <div class="comp-card">
+        <h4>Data table</h4>
+        <table>
+          <thead><tr><th>User</th><th>Action</th><th>Time</th></tr></thead>
+          <tbody>
+            <tr><td>admin@co.com</td><td>Assigned investigator</td><td>14:02</td></tr>
+            <tr><td>j.reyes@co.com</td><td>Updated status</td><td>14:10</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="border-bottom:none;">
+    <h2 class="section-title">Full layout check</h2>
+    <p class="section-desc">Sidebar (unchanged brand navy) next to the new neutral page background, so you can see the contrast between them.</p>
+    <div class="full-page-demo">
+      <div class="sidebar-demo">
+        <div class="brand">MySafeSpeak</div>
+        <div class="item active">Home</div>
+        <div class="item">My Reports</div>
+        <div class="item">Create Report</div>
+        <div class="item">Chat</div>
+        <div class="item">Notifications</div>
+      </div>
+      <div class="full-page-main">
+        <div class="stat-mini"><div class="lbl">Total reports</div><div class="val">4</div></div>
+        <div class="stat-mini"><div class="lbl">Investigating</div><div class="val">2</div></div>
+        <div class="stat-mini"><div class="lbl">Resolved</div><div class="val">1</div></div>
+        <div class="report-row"><div><div class="cat">Harassment</div><h5>Late-night messages from manager</h5></div><span class="stamp pending">Investigating</span></div>
+        <div class="report-row"><div><div class="cat">Fraud</div><h5>Expense discrepancies</h5></div><span class="stamp new">New</span></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>This file is standalone — nothing in the live prototype has been touched.</p>
+  <div class="approve-note">✓ If this looks right, say the word and I'll apply it to every page's dark theme.</div>
+</footer>
+
+</body>
+</html>

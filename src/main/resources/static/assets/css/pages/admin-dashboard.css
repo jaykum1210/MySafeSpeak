@@ -1,0 +1,13 @@
+.quick-grid{ grid-template-columns:repeat(4,1fr); }
+.quick-card{ padding:20px; }
+.quick-card .ic{ width:34px; height:34px; font-size:12px; margin-bottom:12px; }
+.quick-card h3{ font-size:14.5px; }
+.quick-card p{ font-size:12px; margin-top:5px; }
+
+.stat-grid{ grid-template-columns:repeat(7,1fr); gap:12px; }
+.stat-card{ padding:14px 14px; }
+.stat-card .lbl{ font-size:9.5px; letter-spacing:.03em; }
+.stat-card .val{ font-size:20px; margin-top:5px; }
+.lower-grid{ grid-template-columns:1.2fr 1fr; }
+
+/* Responsive overrides for .stat-grid and .quick-grid now live in assets/css/responsive.css. */

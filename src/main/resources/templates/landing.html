@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySafeSpeak — Anonymous incident reporting for workplaces</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/landing.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+</head>
+<body>
+
+
+<nav class="site-nav">
+  <div class="bar">
+    <div class="brand">MySafeSpeak</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="track-report.html">Track a report</a>
+    </div>
+    <div class="nav-cta">
+      <button class="theme-switch" onclick="window.__theme && window.__theme.toggle()" aria-label="Toggle dark mode" type="button">
+        <span class="ts-thumb"></span>
+        <span class="ts-option ts-light">&#9728;</span>
+        <span class="ts-option ts-dark">&#9789;</span>
+      </button>
+      <a href="login.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-primary">Sign up</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-pro">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow-pill">Anonymous incident reporting</div>
+        <h1>Speak up, without putting your name on it.</h1>
+        <p class="lede">MySafeSpeak lets employees report harassment, fraud, and safety violations with full anonymity — while investigators still get everything they need to act.</p>
+        <div class="hero-ctas">
+          <a href="signup.html" class="btn btn-primary">Submit a report</a>
+          <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+        </div>
+        <div class="hero-trust">
+          <div class="item"><div><div class="n">100%</div><div class="l">Identity never shared</div></div></div>
+          <div class="divider"></div>
+          <div class="item"><div><div class="n">&lt;5 min</div><div class="l">To file a report</div></div></div>
+          <div class="divider"></div>
+          <div class="item"><div><div class="n">24/7</div><div class="l">Case tracking access</div></div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hv-glow"></div>
+        <div class="hv-card hv-main">
+          <div class="top">
+            <div><div class="cat">Workplace Harassment</div><h4>Repeated late-night messages from manager</h4></div>
+            <span class="hv-stamp">Investigating</span>
+          </div>
+          <div class="hv-redact-lines"><span></span><span></span><span></span></div>
+          <div class="hv-foot">
+            <span class="tid">TRK-2C9F-7841</span>
+            <div class="avs"><div class="av"></div><div class="av" style="background:var(--signal-10)"></div></div>
+          </div>
+        </div>
+        <div class="hv-card hv-chat">
+          <div class="row"><div class="av">JR</div><div class="who">Investigator</div></div>
+          <div class="msg">"Could you share the screenshot you mentioned?"</div>
+        </div>
+        <div class="hv-card hv-token">
+          <div class="lbl">Tracking ID</div>
+          <div class="val">TRK-2C9F-7841</div>
+          <div class="chk">Saved — check anytime, no login</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="trust-band">
+  <div class="wrap row">
+    <div class="lbl">Built for teams that take culture seriously</div>
+    <div class="trust-marks">
+      <div class="trust-mark">Northlane</div>
+      <div class="trust-mark">Verdant&nbsp;Co.</div>
+      <div class="trust-mark">Halcyon</div>
+      <div class="trust-mark">Brightfield</div>
+      <div class="trust-mark">Meridian</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="block" id="features">
+
+    <div class="feat-row">
+      <div class="feat-copy">
+        <div class="feat-index">01 — Reporting</div>
+        <h3>Every category covered, filed in minutes</h3>
+        <p>From harassment to fraud to safety violations, reporters pick a category, describe what happened, and get a tracking token instantly — no account approval, no waiting.</p>
+        <ul class="feat-list">
+          <li>15+ built-in incident categories</li>
+          <li>Draft-and-resume so nothing's lost mid-report</li>
+          <li>Optional evidence upload at every step</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="chip-cloud">
+          <span class="on">Harassment</span>
+          <span class="urgent">Fraud</span>
+          <span>Discrimination</span>
+          <span class="urgent">Safety Violation</span>
+          <span>Data Privacy</span>
+          <span>Retaliation</span>
+          <span>Ethics Violation</span>
+          <span>Other</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-row reverse">
+      <div class="feat-copy">
+        <div class="feat-index">02 — Evidence</div>
+        <h3>Encrypted the moment it's uploaded</h3>
+        <p>Screenshots, recordings, and documents are encrypted on upload and visible only to the investigator assigned to that specific case — never stored in the open.</p>
+        <ul class="feat-list">
+          <li>Photos, video, audio, PDFs, and documents</li>
+          <li>Access limited to the assigned investigator</li>
+          <li>Full encryption in transit and at rest</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="lock-visual">
+          <div class="lock-row"><div class="ic">PNG</div><div class="fn">message_thread.png</div><div class="badge">Encrypted</div></div>
+          <div class="lock-row"><div class="ic">MP3</div><div class="fn">voice_memo.mp3</div><div class="badge">Encrypted</div></div>
+          <div class="lock-row"><div class="ic">PDF</div><div class="fn">expense_record.pdf</div><div class="badge">Encrypted</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-row">
+      <div class="feat-copy">
+        <div class="feat-index">03 — Tracking</div>
+        <h3>Follow your case without logging in</h3>
+        <p>Every report generates a private tracking token. Reporters can check status any time — no account, no password, nothing tied back to who they are.</p>
+        <ul class="feat-list">
+          <li>Live status without an account</li>
+          <li>Full timeline visible once logged in</li>
+          <li>Nothing about the token identifies the reporter</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="track-visual">
+          <div class="tok">TRK-2C9F-7841-K02</div>
+          <div class="tl">
+            <div class="tl-i active">Report submitted</div>
+            <div class="tl-i active">Assigned to investigator</div>
+            <div class="tl-i">Under active investigation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feat-row reverse">
+      <div class="feat-copy">
+        <div class="feat-index">04 — Communication</div>
+        <h3>Talk to your investigator, stay unnamed</h3>
+        <p>If an investigator needs more detail, they reach out through anonymous chat — reporters can respond or share more evidence without ever revealing who they are.</p>
+        <ul class="feat-list">
+          <li>Two-way anonymous messaging</li>
+          <li>Share follow-up evidence directly in-thread</li>
+          <li>Read receipts, no identity attached</li>
+        </ul>
+      </div>
+      <div class="feat-visual">
+        <div class="chat-visual">
+          <div class="b them">Could you share the screenshot you mentioned?</div>
+          <div class="b me">Just added it — let me know if you need anything else.</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="block" style="padding-top:0;">
+    <div class="stats-band">
+      <div class="grid">
+        <div class="stat"><div class="n">148</div><div class="l">Reports filed and resolved</div></div>
+        <div class="stat"><div class="n">89%</div><div class="l">Resolution rate across all cases</div></div>
+        <div class="stat"><div class="n">4.1 days</div><div class="l">Average time to resolution</div></div>
+        <div class="stat"><div class="n">0</div><div class="l">Identities ever disclosed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how-it-works">
+    <div class="hiw-head">
+      <h2>How a report moves through the system</h2>
+      <p>A real sequence, start to close — here's exactly what happens after you hit submit.</p>
+    </div>
+    <div class="hiw-stepper">
+      <div class="hiw-line"></div>
+      <div class="hiw-grid">
+        <div class="hiw-step"><div class="hiw-num">01</div><h4>Submit</h4><p>Pick a category, describe it, get your tracking token.</p></div>
+        <div class="hiw-step"><div class="hiw-num">02</div><h4>Assign</h4><p>A manager routes it to an investigator — anonymously.</p></div>
+        <div class="hiw-step"><div class="hiw-num">03</div><h4>Investigate</h4><p>They review, and may message you for more detail.</p></div>
+        <div class="hiw-step"><div class="hiw-num">04</div><h4>Update</h4><p>You're notified at every status change, automatically.</p></div>
+        <div class="hiw-step"><div class="hiw-num">05</div><h4>Resolve</h4><p>You get an outcome — and can appeal if eligible.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="testimonial">
+      <div class="mark">"</div>
+      <div>
+        <blockquote>We finally get reports we used to only hear about secondhand. People trust that the anonymity is real — and that's the whole point.</blockquote>
+        <div class="attrib">
+          <div class="av">PM</div>
+          <div><div class="name">Priya M.</div><div class="role">Head of People Operations, mid-size retail company</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="faq-wrap">
+      <div class="faq-side">
+        <h2>Frequently asked</h2>
+        <p>The questions we hear most from employees before they file their first report.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open><summary>Can my company find out who I am?</summary><p>No. Your account is never linked to your name in any view an investigator, manager, or admin can see. Only your company email is used to verify you're an employee during signup.</p></details>
+        <details class="faq-item"><summary>Do I need an account to check my report?</summary><p>No — your tracking token alone lets you view status updates without logging in.</p></details>
+        <details class="faq-item"><summary>What can I attach as evidence?</summary><p>Photos, videos, audio, documents, PDFs, and screenshots. Everything is encrypted on upload.</p></details>
+        <details class="faq-item"><summary>What happens if I disagree with the outcome?</summary><p>Eligible cases can be appealed directly from your report's detail page.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="cta-final">
+      <div class="hv-glow"></div>
+      <h2>Something's not right at work? Say something — safely.</h2>
+      <p>Takes under five minutes. No name required.</p>
+      <div class="actions">
+        <a href="signup.html" class="btn btn-primary">Get started</a>
+        <a href="track-report.html" class="btn btn-secondary">Track an existing report</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand">MySafeSpeak</div>
+        <p style="margin-top:12px; font-size:13.5px; color:var(--ink-70); max-width:34ch;">Anonymous incident reporting, built for employees who need to be heard without being identified.</p>
+      </div>
+      <div><h4>Product</h4><div class="links"><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="track-report.html">Track a report</a></div></div>
+      <div><h4>Company</h4><div class="links"><a href="#" onclick="return false">About</a><a href="#" onclick="return false">Contact</a><a href="#faq">FAQ</a></div></div>
+      <div><h4>Legal</h4><div class="links"><a href="#" onclick="return false">Privacy Policy</a><a href="#" onclick="return false">Terms & Conditions</a></div></div>
+    </div>
+    <div class="bottom"><span>© 2026 MYSAFESPEAK</span><span>ALL REPORTS ENCRYPTED IN TRANSIT AND AT REST</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

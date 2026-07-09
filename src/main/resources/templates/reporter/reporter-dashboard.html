@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/reporter-dashboard.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/reporter.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Reporter</div>
+  <a href="reporter-dashboard.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="my-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>My Reports</a>
+  <a href="create-report.html" class="item" style="text-decoration:none;"><span class="dot"></span>Create Report</a>
+  <a href="chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <div class="group-label">Support</div>
+  <a href="help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">Reporter · TRK-2C9F-7841</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <div>
+        <h1>Welcome back</h1>
+        <div class="sub">Here's what's happening with your reports.</div>
+      </div>
+      <div class="actions">
+        <button class="icon-btn">✉<span class="badge">2</span></button>
+        <button class="icon-btn">⚑</button>
+        <a href="create-report.html" class="btn btn-primary">+ New report</a>
+        <div class="avatar">R</div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="stat-grid">
+        <div class="stat-card accent">
+          <div class="lbl">Total reports</div>
+          <div class="val">4</div>
+          <div class="delta">Since you joined</div>
+        </div>
+        <div class="stat-card">
+          <div class="lbl">Under investigation</div>
+          <div class="val">2</div>
+          <div class="delta">Avg. response 2 days</div>
+        </div>
+        <div class="stat-card">
+          <div class="lbl">Resolved</div>
+          <div class="val">1</div>
+          <div class="delta">1 closed this month</div>
+        </div>
+        <div class="stat-card">
+          <div class="lbl">Unread messages</div>
+          <div class="val">2</div>
+          <div class="delta">From investigators</div>
+        </div>
+      </div>
+
+      <div class="sec-head">
+        <h2>Recent reports</h2>
+        <a href="#" onclick="return false">View all →</a>
+      </div>
+
+      <a href="report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark">HR</div>
+          <div class="info">
+            <div class="cat">Workplace Harassment</div>
+            <h3>Repeated late-night messages from manager</h3>
+            <div class="meta">TRK-2C9F-7841 · Filed Jun 24</div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="stamp pending">Investigating</span>
+        </div>
+      </div></a>
+
+      <a href="my-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark brick">FR</div>
+          <div class="info">
+            <div class="cat">Fraud</div>
+            <h3>Expense report discrepancies in procurement</h3>
+            <div class="meta">TRK-8A11-0093 · Filed Jun 29</div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="stamp new">New</span>
+        </div>
+      </div></a>
+
+      <a href="my-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark">SF</div>
+          <div class="info">
+            <div class="cat">Safety Violation</div>
+            <h3>Blocked fire exit on 3rd floor</h3>
+            <div class="meta">TRK-4B02-5567 · Filed Jun 12</div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="stamp resolved">Resolved</span>
+        </div>
+      </div></a>
+
+      <div class="lower-grid">
+        <div class="panel">
+          <h2>Recent activity</h2>
+          <div class="activity-item">
+            <div class="bullet"></div>
+            <div>
+              <div class="txt"><span class="who">Investigator J. Reyes</span> sent you a message on TRK-2C9F-7841</div>
+              <div class="time">2 hours ago</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="bullet"></div>
+            <div>
+              <div class="txt">Status changed to <strong>Investigating</strong> on TRK-2C9F-7841</div>
+              <div class="time">Yesterday, 4:10 PM</div>
+            </div>
+          </div>
+          <div class="activity-item">
+            <div class="bullet"></div>
+            <div>
+              <div class="txt">Report <strong>TRK-4B02-5567</strong> was marked Resolved</div>
+              <div class="time">Jun 20</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel cta-panel">
+          <h2>Need to report something else?</h2>
+          <p>Submitting takes under five minutes. You'll get a tracking token instantly.</p>
+          <a href="create-report.html" class="btn">+ Create report</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

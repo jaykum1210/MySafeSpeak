@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/notifications.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/manager.js" defer></script>
+</head>
+<body class="app-shell page-notifications">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Manager</div>
+  <a href="manager-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="manager-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="manager-team.html" class="item" style="text-decoration:none;"><span class="dot"></span>Team</a>
+  <a href="manager-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="manager-notifications.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="manager-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="manager-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="manager-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">M. Okafor · Manager</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <div>
+        <h1>Notifications</h1>
+        <div class="sub">Updates across your department's reports and team.</div>
+      </div>
+      <span class="mark-all">Mark all as read</span>
+    </div>
+
+    <div class="content">
+
+      <div class="stat-strip">
+        <div class="stat-mini"><div class="lbl">Total</div><div class="val">14</div></div>
+        <div class="stat-mini"><div class="lbl">Unread</div><div class="val">3</div></div>
+        <div class="stat-mini"><div class="lbl">Read</div><div class="val">11</div></div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="pills">
+          <div class="pill active">All</div>
+          <div class="pill">Unread</div>
+          <div class="pill">Reports</div>
+          <div class="pill">Chat</div>
+          <div class="pill">Appeals</div>
+          <div class="pill">System</div>
+        </div>
+        <input type="text" placeholder="Search notifications...">
+      </div>
+
+      <div class="notif unread">
+        <div class="ic">MSG</div>
+        <div class="body">
+          <div class="title">New message from Investigator J. Reyes</div>
+          <div class="desc">"Could you upload the screenshot you mentioned?"</div>
+          <div class="meta">TRK-2C9F-7841 · Repeated late-night messages from manager · 2h ago</div>
+        </div>
+        <div class="unread-mark"></div>
+        <div class="actions"><span>Mark read</span><span class="del">Delete</span></div>
+      </div>
+
+      <div class="notif unread">
+        <div class="ic">RPT</div>
+        <div class="body">
+          <div class="title">Investigator assigned to your report</div>
+          <div class="desc">J. Reyes has been assigned to investigate your case.</div>
+          <div class="meta">TRK-2C9F-7841 · Yesterday, 9:03 AM</div>
+        </div>
+        <div class="unread-mark"></div>
+        <div class="actions"><span>Mark read</span><span class="del">Delete</span></div>
+      </div>
+
+      <div class="notif unread">
+        <div class="ic">SYS</div>
+        <div class="body">
+          <div class="title">Report received</div>
+          <div class="desc">Your report on Fraud has been submitted and is awaiting assignment.</div>
+          <div class="meta">TRK-8A11-0093 · Jun 29, 3:12 PM</div>
+        </div>
+        <div class="unread-mark"></div>
+        <div class="actions"><span>Mark read</span><span class="del">Delete</span></div>
+      </div>
+
+      <div class="notif">
+        <div class="ic">RPT</div>
+        <div class="body">
+          <div class="title">Status changed to Resolved</div>
+          <div class="desc">Your Safety Violation report has been marked resolved.</div>
+          <div class="meta">TRK-4B02-5567 · Jun 20, 11:40 AM</div>
+        </div>
+        <div style="width:8px;"></div>
+        <div class="actions"><span class="del">Delete</span></div>
+      </div>
+
+      <div class="notif">
+        <div class="ic">APL</div>
+        <div class="body">
+          <div class="title">Appeal submitted</div>
+          <div class="desc">Your appeal on TRK-1D77-2201 has been received and is under review.</div>
+          <div class="meta">TRK-1D77-2201 · Jun 11, 4:02 PM</div>
+        </div>
+        <div style="width:8px;"></div>
+        <div class="actions"><span class="del">Delete</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

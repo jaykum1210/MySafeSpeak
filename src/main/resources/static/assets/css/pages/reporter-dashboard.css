@@ -1,0 +1,13 @@
+.topbar .actions{ display:flex; align-items:center; gap:16px; }
+.stat-grid{ grid-template-columns:repeat(4,1fr); gap:16px; }
+.stat-card{ padding:20px 22px; }
+.stat-card .lbl{ font-size:11px; letter-spacing:.06em; }
+.stat-card .val{ font-size:30px; margin-top:8px; }
+.stat-card .delta{ font-size:12px; margin-top:6px; }
+.stat-card.accent .delta{ color:#C7D2D1; }
+
+.sec-head{ margin:40px 0 18px; }
+.lower-grid{ grid-template-columns:1.6fr 1fr; }
+.cta-panel{ background:var(--harbor); color:#fff; border:none; }
+.cta-panel p{ font-size:13.5px; color:#E4F0EF; margin-bottom:16px; }
+.cta-panel .btn{ background:#fff; color:var(--harbor-dark); }

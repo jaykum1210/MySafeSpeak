@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Report — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/create-report.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/reporter.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Reporter</div>
+  <a href="reporter-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="my-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>My Reports</a>
+  <a href="create-report.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Create Report</a>
+  <a href="chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <div class="group-label">Support</div>
+  <a href="help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">Reporter · TRK-2C9F-7841</div>
+  </div>
+</aside>
+
+  <div class="main">
+
+    <div id="form-flow">
+      <div class="page-head">
+        <h1>Create a report</h1>
+        <p>Everything you share here stays anonymous. Only assigned investigators can see the details.</p>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="seg"><div class="bar current" id="bar1"></div><div class="lbl">Category</div></div>
+        <div class="seg"><div class="bar" id="bar2"></div><div class="lbl">Details</div></div>
+        <div class="seg"><div class="bar" id="bar3"></div><div class="lbl">Evidence</div></div>
+        <div class="seg"><div class="bar" id="bar4"></div><div class="lbl">Review</div></div>
+      </div>
+
+      <!-- STEP 1: Category + Title -->
+      <div class="step active" id="step-1">
+        <div class="card">
+          <h2>What kind of incident is this?</h2>
+          <div class="desc">Choose the category that fits best — you can add more detail next.</div>
+          <div class="chip-grid">
+            <div class="chip" onclick="selectChip(this)">Workplace Harassment</div>
+            <div class="chip urgent" onclick="selectChip(this)">Sexual Harassment</div>
+            <div class="chip" onclick="selectChip(this)">Discrimination</div>
+            <div class="chip" onclick="selectChip(this)">Bullying</div>
+            <div class="chip urgent" onclick="selectChip(this)">Fraud</div>
+            <div class="chip urgent" onclick="selectChip(this)">Corruption</div>
+            <div class="chip urgent" onclick="selectChip(this)">Theft</div>
+            <div class="chip" onclick="selectChip(this)">Data Privacy Violation</div>
+            <div class="chip" onclick="selectChip(this)">Conflict of Interest</div>
+            <div class="chip urgent" onclick="selectChip(this)">Safety Violation</div>
+            <div class="chip" onclick="selectChip(this)">Policy Violation</div>
+            <div class="chip" onclick="selectChip(this)">Ethics Violation</div>
+            <div class="chip" onclick="selectChip(this)">Abuse of Authority</div>
+            <div class="chip" onclick="selectChip(this)">Retaliation</div>
+            <div class="chip" onclick="selectChip(this)">Other</div>
+          </div>
+          <div class="field">
+            <label>Report title</label>
+            <input type="text" placeholder="Short summary, e.g. 'Repeated late-night messages from manager'">
+          </div>
+          <div class="step-actions">
+            <span></span>
+            <button class="btn btn-primary" onclick="goStep(2)">Continue →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: Incident details -->
+      <div class="step" id="step-2">
+        <div class="card">
+          <h2>Incident details</h2>
+          <div class="desc">Add as much as you know — approximate is fine where noted.</div>
+
+          <div class="grid-3">
+            <div class="field"><label>Date <span class="opt">required</span></label><input type="date"></div>
+            <div class="field"><label>Time <span class="opt">optional / approx.</span></label><input type="time"></div>
+            <div class="field"><label>Location</label><input type="text" placeholder="e.g. 4th floor break room"></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field"><label>People involved</label><input type="text" placeholder="Roles or names, if known"></div>
+            <div class="field"><label>Witnesses <span class="opt">optional</span></label><input type="text" placeholder="Anyone who saw this happen"></div>
+          </div>
+
+          <div class="field">
+            <label>What happened</label>
+            <textarea placeholder="Describe the incident in as much detail as you're comfortable with."></textarea>
+          </div>
+
+          <div class="field">
+            <label>Impact <span class="opt">optional</span></label>
+            <textarea placeholder="How has this affected you or others?" style="min-height:70px"></textarea>
+          </div>
+
+          <div class="field">
+            <label>Have you reported this before?</label>
+            <div class="toggle-row">
+              <div class="toggle-btn" onclick="toggleYesNo(this,'prev-report-detail')">Yes</div>
+              <div class="toggle-btn selected" onclick="toggleYesNo(this,'prev-report-detail')">No</div>
+            </div>
+            <div class="conditional" id="prev-report-detail">
+              <div class="field" style="margin-top:14px;">
+                <label>Reported to</label>
+                <select>
+                  <option>HR</option>
+                  <option>Manager</option>
+                  <option>Security</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-secondary" onclick="goStep(1)">← Back</button>
+            <button class="btn btn-primary" onclick="goStep(3)">Continue →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: Evidence -->
+      <div class="step" id="step-3">
+        <div class="card">
+          <h2>Add evidence</h2>
+          <div class="desc">Optional, but it helps investigators move faster. Everything is encrypted on upload.</div>
+
+          <div class="dropzone">
+            <div class="icon">↑</div>
+            <div class="main-txt">Drag files here or click to upload</div>
+            <div class="sub-txt">Up to 10 files, 25MB each</div>
+            <div class="filetype-row">
+              <span class="filetype-tag">PHOTO</span>
+              <span class="filetype-tag">VIDEO</span>
+              <span class="filetype-tag">AUDIO</span>
+              <span class="filetype-tag">DOCUMENT</span>
+              <span class="filetype-tag">SCREENSHOT</span>
+              <span class="filetype-tag">PDF</span>
+            </div>
+          </div>
+
+          <div class="file-row"><span class="fname">screenshot_message_thread.png</span><span class="remove">Remove</span></div>
+          <div class="file-row"><span class="fname">voice_memo_evidence.mp3</span><span class="remove">Remove</span></div>
+
+          <div class="step-actions">
+            <button class="btn btn-secondary" onclick="goStep(2)">← Back</button>
+            <button class="btn btn-primary" onclick="goStep(4)">Continue →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: Review + Declaration -->
+      <div class="step" id="step-4">
+        <div class="card">
+          <h2>Review and submit</h2>
+          <div class="desc">Check everything looks right before you send it.</div>
+
+          <div class="review-block"><div class="k">Category</div><div class="v" id="rev-category">Workplace Harassment</div></div>
+          <div class="review-block"><div class="k">Title</div><div class="v" id="rev-title">Repeated late-night messages from manager</div></div>
+          <div class="review-block"><div class="k">Evidence attached</div><div class="v">2 files</div></div>
+
+          <div class="declare-box">
+            <input type="checkbox" id="declare">
+            <p>I confirm that the information provided is true to the best of my knowledge.</p>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-secondary" onclick="goStep(3)">← Back</button>
+            <div style="display:flex; gap:10px;">
+              <button class="btn btn-secondary" onclick="alert('Saved as draft')">Save as draft</button>
+              <button class="btn btn-primary" onclick="showSuccess()">Submit report</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="card success-shell" id="success" style="display:none;">
+      <div class="success-mark">✓</div>
+      <h2>Your report has been submitted</h2>
+      <p>Save this token — it's the only way to check status without logging in.</p>
+      <div class="token-card">
+        <div class="label">Tracking ID</div>
+        <div class="value">TRK-9F41-3320-Q17</div>
+      </div>
+      <div class="success-actions">
+        <a href="reporter-dashboard.html" class="btn btn-secondary">Back to dashboard</a>
+        <a href="#" onclick="return false" class="btn btn-primary">View report</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

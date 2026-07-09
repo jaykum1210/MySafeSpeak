@@ -1,0 +1,20 @@
+.content{ padding:32px 36px 80px; max-width:680px; }
+.page-head h1{ font-size:23px; }
+.page-head p{ font-size:13.5px; }
+.panel{ padding:28px; margin-top:22px; }
+.panel h2{ font-size:15.5px; margin-bottom:18px; }
+.field input, .field select{ padding:11px 13px; }
+.grid-2{ gap:16px; }
+
+.role-grid{ display:flex; gap:10px; }
+.role-chip{ flex:1; text-align:center; padding:14px; border:1.5px solid var(--mist-dark); border-radius:9px; cursor:pointer; font-size:13.5px; font-weight:600; }
+.role-chip.selected{ border-color:var(--harbor); background:var(--harbor-10); color:var(--harbor-dark); }
+
+.upload-row{ display:flex; align-items:center; gap:14px; }
+.avatar-upload{ width:56px; height:56px; border-radius:50%; background:var(--paper); border:1.5px dashed var(--mist-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; color:var(--ink-70); text-align:center; flex-shrink:0; }
+
+.flow-note{ background:var(--harbor-10); border:1px solid var(--harbor); border-radius:8px; padding:14px 16px; font-size:13px; color:var(--harbor-dark); margin-top:20px; }
+.flow-note ol{ margin:8px 0 0 18px; }
+.flow-note li{ margin-bottom:4px; }
+
+.step-actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:26px; }

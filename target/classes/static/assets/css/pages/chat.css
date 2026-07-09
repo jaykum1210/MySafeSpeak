@@ -1,0 +1,50 @@
+body.app-shell{ overflow:hidden; }
+.shell{ grid-template-columns:240px 320px 1fr; height:100vh; }
+.sidebar{ position:static; }
+
+.chat-list{ background:var(--surface); border-right:1px solid var(--mist); display:flex; flex-direction:column; }
+.chat-list-head{ padding:20px 18px 14px; border-bottom:1px solid var(--mist); }
+.chat-list-head h2{ font-family:var(--font-display); font-size:16px; font-weight:600; margin-bottom:12px; }
+.chat-list-head input{ width:100%; padding:9px 12px; border:1.5px solid var(--mist-dark); border-radius:7px; font-size:13px; background:var(--paper); color:var(--ink); }
+.chat-items{ overflow-y:auto; flex:1; }
+.chat-item{ padding:14px 18px; border-bottom:1px solid var(--mist); cursor:pointer; }
+.chat-item:hover{ background:var(--paper); }
+.chat-item.active{ background:var(--harbor-10); border-left:3px solid var(--harbor); }
+.chat-item .top{ display:flex; justify-content:space-between; align-items:center; }
+.chat-item .title{ font-size:13.5px; font-weight:600; }
+.chat-item .time{ font-family:var(--font-mono); font-size:10.5px; color:var(--ink-70); }
+.chat-item .tid{ font-family:var(--font-mono); font-size:10.5px; color:var(--ink-70); margin-top:3px; }
+.chat-item .snippet{ font-size:12.5px; color:var(--ink-70); margin-top:5px; }
+.chat-item .row2{ display:flex; justify-content:space-between; align-items:center; margin-top:6px; }
+.stamp-mini{ font-family:var(--font-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:.04em; padding:2px 8px; border-radius:4px; border:1px solid currentColor; }
+.stamp-mini.pending{ color:var(--signal); }
+.stamp-mini.new{ color:var(--harbor-dark); }
+.unread-dot{ width:8px; height:8px; border-radius:50%; background:var(--signal); }
+
+.chat-window{ display:flex; flex-direction:column; background:var(--paper); }
+.chat-window-head{ padding:16px 26px; border-bottom:1px solid var(--mist); background:var(--surface); display:flex; justify-content:space-between; align-items:center; }
+.cw-title{ font-family:var(--font-display); font-size:15.5px; font-weight:600; }
+.cw-sub{ font-family:var(--font-mono); font-size:11px; color:var(--ink-70); margin-top:3px; }
+.cw-status{ display:flex; align-items:center; gap:8px; }
+
+.messages{ flex:1; overflow-y:auto; padding:26px; display:flex; flex-direction:column; gap:14px; }
+.sys-msg{ align-self:center; font-family:var(--font-mono); font-size:11px; color:var(--ink-70); background:var(--surface); border:1px solid var(--mist); padding:6px 14px; border-radius:20px; }
+.msg-row{ display:flex; flex-direction:column; max-width:60%; }
+.msg-row.me{ align-self:flex-end; align-items:flex-end; }
+.msg-row.them{ align-self:flex-start; }
+.bubble{ padding:12px 16px; border-radius:14px; font-size:14px; }
+.msg-row.them .bubble{ background:var(--surface); border:1px solid var(--mist); border-bottom-left-radius:4px; }
+.msg-row.me .bubble{ background:var(--harbor); color:#fff; border-bottom-right-radius:4px; }
+.msg-meta{ font-family:var(--font-mono); font-size:10.5px; color:var(--ink-70); margin-top:5px; }
+.attach-bubble{ display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px; background:var(--surface); border:1px solid var(--mist); font-size:13px; }
+.attach-bubble .ic{ width:30px; height:30px; border-radius:6px; background:var(--harbor-10); color:var(--harbor-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:700; flex-shrink:0; }
+.attach-bubble .dl{ font-size:11px; color:var(--harbor-dark); font-weight:600; margin-left:auto; }
+
+.typing{ font-family:var(--font-mono); font-size:11.5px; color:var(--ink-70); padding:0 26px 10px; }
+.composer{ padding:16px 26px; border-top:1px solid var(--mist); background:var(--surface); display:flex; gap:10px; align-items:center; }
+.composer .icon-btn{ width:38px; height:38px; border-radius:8px; border:1px solid var(--mist-dark); background:var(--paper); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:13px; cursor:pointer; flex-shrink:0; color:var(--ink); }
+.composer input{ flex:1; padding:12px 16px; border:1.5px solid var(--mist-dark); border-radius:22px; font-size:14px; background:var(--paper); color:var(--ink); }
+.composer input:focus{ outline:none; border-color:var(--harbor); background:var(--surface); }
+.composer .send{ width:40px; height:40px; border-radius:50%; background:var(--harbor); color:#fff; border:none; font-weight:700; cursor:pointer; flex-shrink:0; }
+
+/* Responsive overrides for .shell and .sidebar now live in assets/css/responsive.css. */

@@ -1,0 +1,135 @@
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 36px;
+  border-bottom:1px solid var(--mist);
+  background:var(--surface);
+}
+
+.topbar h1{ font-family:var(--font-display); font-size:21px; font-weight:600; }
+.topbar .sub{ font-size:13px; color:var(--ink-70); margin-top:3px; }
+.topbar .actions{ display:flex; align-items:center; gap:16px; }
+
+.content{ padding:32px 36px 60px; }
+.main{ padding:36px 40px 80px; max-width:760px; }
+
+.page-head h1{ font-family:var(--font-display); font-size:24px; font-weight:600; }
+.page-head p{ color:var(--ink-70); font-size:14px; margin-top:6px; }
+
+/* Shared card/panel styles now live in components/card.css. */
+
+.breadcrumb{ font-size:12.5px; color:var(--ink-70); margin-bottom:14px; }
+.breadcrumb a{ color:var(--harbor-dark); font-weight:600; }
+
+.sec-head{ display:flex; align-items:center; justify-content:space-between; margin:38px 0 16px; }
+.sec-head h2{ font-family:var(--font-display); font-size:18px; font-weight:600; }
+.sec-head a{ font-size:13px; color:var(--harbor-dark); font-weight:600; }
+
+.avatar{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--harbor-10);
+  border:1px solid var(--harbor);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-mono);
+  font-size:12px;
+  color:var(--harbor-dark);
+  font-weight:600;
+}
+
+/* Shared .icon-btn styles now live in components/button.css, and its
+   notification-count .badge now lives in components/badge.css. */
+
+.quick-grid{ display:grid; gap:16px; margin-bottom:36px; }
+.stat-grid{ display:grid; gap:14px; }
+.stat-strip{ display:grid; gap:14px; margin-bottom:28px; }
+.lower-grid{ display:grid; gap:20px; margin-top:40px; }
+
+/* Shared .quick-card, .stat-card, .stat-mini, and .report-row styles
+   now live in components/card.css. */
+
+.activity-item{ display:flex; gap:12px; padding:12px 0; border-bottom:1px solid var(--mist); }
+.activity-item:last-child{ border-bottom:none; }
+.activity-item .bullet{ width:8px; height:8px; border-radius:50%; background:var(--harbor); margin-top:5px; flex-shrink:0; }
+.activity-item .txt{ font-size:13.5px; }
+.activity-item .time{ font-family:var(--font-mono); font-size:11px; color:var(--ink-70); margin-top:3px; }
+
+.filter-bar{ display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+.filter-left{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.filter-bar input,
+.filter-bar select{
+  border:1.5px solid var(--mist-dark);
+  border-radius:7px;
+  background:var(--surface);
+  color:var(--ink);
+}
+
+.pill{
+  padding:8px 14px;
+  border:1.5px solid var(--mist-dark);
+  border-radius:20px;
+  font-size:12.5px;
+  font-weight:500;
+  cursor:pointer;
+  background:var(--surface);
+}
+
+.pill.active{ background:var(--ink-fixed); color:#fff; border-color:var(--ink-fixed); }
+.bulk-note{ font-size:12.5px; color:var(--ink-70); }
+
+/* Shared table styles now live in components/table.css, and shared
+   status-stamp styles now live in components/badge.css. */
+
+.view-link{ font-size:12px; color:var(--harbor-dark); font-weight:600; }
+
+/* Responsive breakpoint overrides for this file now live in
+   assets/css/responsive.css. */
+
+/* ---- Timeline / info-card component ----
+   Shared by report-detail, investigator-report-detail, and track-report.
+   Per-page indent/dot-size variants stay in the page files. */
+.timeline::before{ content:''; position:absolute; left:5px; top:6px; bottom:6px; width:2px; background:var(--mist); }
+.tl-item:last-child{ padding-bottom:0; }
+.tl-item.done::before{ background:var(--moss); box-shadow:0 0 0 1.5px var(--moss); }
+
+/* Larger timeline-dot variant — shared by report-detail and track-report (same offsets) */
+.tl-item::before{ content:''; position:absolute; left:-24px; top:3px; width:11px; height:11px; border-radius:50%; background:var(--harbor); border:2px solid #fff; box-shadow:0 0 0 1.5px var(--harbor); }
+.tl-item .t{ font-size:13.5px; font-weight:600; }
+.kv .k{ font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-70); }
+
+/* Shared .info-card styles now live in components/card.css. */
+.head-row .cat{ font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-70); }
+
+/* ---- Bar-chart component ----
+   Shared by analytics.css and admin-analytics.css. Grid sizing and
+   per-page KPI card styling stay in the page files. The analytics
+   .panel padding override now lives in components/card.css (kept
+   after the base .panel rule there, same as before). */
+
+.bar-track{ flex:1; height:10px; background:var(--mist); border-radius:5px; overflow:hidden; }
+.bar-fill{ height:100%; background:var(--harbor); border-radius:5px; }
+
+.legend .li{ display:flex; align-items:center; gap:6px; font-size:12px; color:var(--ink-70); }
+.legend .dot{ width:9px; height:9px; border-radius:2px; }
+
+.trend .col{ flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; }
+.trend .lbl{ font-family:var(--font-mono); font-size:9.5px; color:var(--ink-70); }
+
+/* Responsive override for .grid-2 now lives in assets/css/responsive.css. */
+
+/* ---- List-page component ----
+   Mini-stat cards + the 2-column stat-strip breakpoint reused across
+   reports/users/departments/team/notifications pages. Column counts and
+   other per-breakpoint rules stay in the page files. Note: reports.css
+   uses a different, more compact stat-mini sizing, so it keeps its own
+   copy instead of using this. notifications.css uses a 1-column
+   stat-strip breakpoint instead of 2, so its own page CSS overrides the
+   rule below by load order — it still gets the shared .stat-mini styling.
+   That sizing override now lives in components/card.css (kept after
+   the base .stat-mini rule there, same as before). */
+
+/* Responsive override for .stat-strip now lives in assets/css/responsive.css. */

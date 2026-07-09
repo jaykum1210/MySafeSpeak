@@ -1,0 +1,8 @@
+/* ---- ALERT ----
+   No shared alert/notice-box component exists yet — similar-looking
+   notice boxes (.otp-note in layout/forms.css, .flow-note in
+   admin-add-user.css, .login-note in track-report.css, .approval-note
+   in signup.css) are each their own page-scoped class today, so they
+   were left in place rather than merged under a new shared class name.
+   This file is a placeholder so a future shared .alert component has a
+   home instead of being duplicated per page. */

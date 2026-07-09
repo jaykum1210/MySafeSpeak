@@ -1,0 +1,17 @@
+/* Shared split-screen shell now lives in components/auth.css.
+   Only login-specific sizing/content differences remain here. */
+
+.panel-brand .msg{ max-width:26ch; }
+.panel-brand .msg h1{ font-family:var(--font-display); font-weight:600; font-size:30px; line-height:1.15; }
+.panel-brand .msg p{ margin-top:14px; color:#C7D2D1; font-size:14.5px; }
+.panel-brand .redaction-stack span{ display:block; height:11px; background:var(--paper-fixed); opacity:.85; border-radius:1px; margin-bottom:8px; }
+.panel-brand .redaction-stack span:nth-child(1){ width:64%; }
+.panel-brand .redaction-stack span:nth-child(2){ width:30%; background:var(--harbor); opacity:1; }
+.panel-brand .redaction-stack span:nth-child(3){ width:80%; }
+
+.panel-form{ display:flex; align-items:center; justify-content:center; padding:52px; }
+.form-shell{ width:100%; max-width:380px; }
+.form-shell .sub{ color:var(--ink-70); font-size:14px; margin-top:8px; margin-bottom:30px; }
+
+.divider{ display:flex; align-items:center; gap:12px; margin:22px 0; color:var(--ink-70); font-size:12px; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.06em; }
+.divider::before, .divider::after{ content:''; flex:1; height:1px; background:var(--mist); }

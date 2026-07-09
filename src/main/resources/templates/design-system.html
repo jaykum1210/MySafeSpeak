@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MySafeSpeak — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/design-system.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Design System · v1</div>
+    <h1>MySafeSpeak</h1>
+    <p>A visual language for anonymous workplace reporting. Every choice here serves one idea: the reporter's identity stays hidden, but their report is taken seriously — visible, tracked, and acted on.</p>
+    <div class="hero-redaction"><span></span><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="redaction"><span></span><span></span><span></span><small>Color</small></div>
+  <section>
+    <h2 class="section-title">Palette</h2>
+    <p class="section-desc">No red alarm-panel palette — a report already carries enough tension. Ink and Harbor teal carry the weight of trust and discretion; warm Signal and Moss mark status without shouting; Brick is reserved only for the most urgent categories.</p>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="fill" style="background:var(--ink)"></div><div class="meta"><div class="name">Ink</div><div class="hex">#12213C</div><div class="use">Text, dark surfaces</div></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--paper); border-bottom:1px solid var(--mist)"></div><div class="meta"><div class="name">Paper</div><div class="hex">#F3F5F4</div><div class="use">Page background</div></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--harbor)"></div><div class="meta"><div class="name">Harbor</div><div class="hex">#2B6E6B</div><div class="use">Primary / trust</div></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--signal)"></div><div class="meta"><div class="name">Signal</div><div class="hex">#C9713A</div><div class="use">Pending / attention</div></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--moss)"></div><div class="meta"><div class="name">Moss</div><div class="hex">#4F7A56</div><div class="use">Resolved / success</div></div></div>
+      <div class="swatch"><div class="fill" style="background:var(--brick)"></div><div class="meta"><div class="name">Brick</div><div class="hex">#A6453A</div><div class="use">Urgent categories only</div></div></div>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Typography</small></div>
+  <section>
+    <h2 class="section-title">Type</h2>
+    <p class="section-desc">Space Grotesk gives headings a procedural, official edge. Inter carries the reading — reports, chat, help text. JetBrains Mono is reserved for anything that functions like a case-file artifact: tracking tokens, IDs, timestamps, audit logs — data that must read as exact and unforgeable.</p>
+    <div class="type-row"><div class="label">Display / 700</div><div class="sample display" style="font-size:34px">Report submitted</div></div>
+    <div class="type-row"><div class="label">Heading / 600</div><div class="sample display" style="font-size:22px; font-weight:600">Investigation Timeline</div></div>
+    <div class="type-row"><div class="label">Body / 400</div><div class="sample body" style="font-size:16px">Your identity is never shared with your manager or the investigator.</div></div>
+    <div class="type-row"><div class="label">Small / 400</div><div class="sample body" style="font-size:13px; color:var(--ink-70)">Evidence is encrypted and only visible to the assigned investigator.</div></div>
+    <div class="type-row"><div class="label">Mono / Data</div><div class="sample mono" style="font-size:15px">TRK-2C9F-7841-K02</div></div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Buttons</small></div>
+  <section>
+    <h2 class="section-title">Actions</h2>
+    <div class="row">
+      <button class="btn btn-primary">Submit report</button>
+      <button class="btn btn-secondary">Save as draft</button>
+      <button class="btn btn-ghost">View details</button>
+      <button class="btn btn-danger">Delete account</button>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Status</small></div>
+  <section>
+    <h2 class="section-title">Stamps</h2>
+    <p class="section-desc">Status reads like a stamp on a case file — a colored border and a dot, never a filled alarm-colored block.</p>
+    <div class="row">
+      <span class="stamp new">New</span>
+      <span class="stamp pending">Under investigation</span>
+      <span class="stamp resolved">Resolved</span>
+      <span class="stamp urgent">Urgent — fraud</span>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Forms</small></div>
+  <section>
+    <h2 class="section-title">Inputs</h2>
+    <div class="form-demo">
+      <div class="field">
+        <label>Company email</label>
+        <input type="email" placeholder="you@company.com">
+      </div>
+      <div class="field">
+        <label>Report category</label>
+        <select><option>Workplace Harassment</option><option>Fraud</option><option>Safety Violation</option></select>
+      </div>
+      <div class="field">
+        <label>One-time passcode</label>
+        <div class="otp-row">
+          <input maxlength="1" value="4"><input maxlength="1" value="7"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+        </div>
+        <div class="helper">Sent to your company email — expires in 10 minutes.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Tracking</small></div>
+  <section>
+    <h2 class="section-title">Tracking token</h2>
+    <div class="token-card">
+      <div class="label">Tracking ID</div>
+      <div class="value">TRK-2C9F-7841-K02</div>
+      <div class="foot">Save this token — it's the only way to check your report's status without logging in.</div>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Cards</small></div>
+  <section>
+    <h2 class="section-title">Report cards</h2>
+    <div class="card-grid">
+      <div class="report-card">
+        <div class="top"><div><div class="cat">Workplace Harassment</div><h3>Repeated late-night messages from manager</h3></div><span class="stamp pending">Investigating</span></div>
+        <div class="desc">Submitted with 2 evidence files. Assigned to Investigator J. Reyes.</div>
+        <div class="meta"><span>TRK-2C9F-7841</span><span>Filed Jun 24</span></div>
+      </div>
+      <div class="report-card">
+        <div class="top"><div><div class="cat">Data Privacy Violation</div><h3>Customer records shared outside team</h3></div><span class="stamp new">New</span></div>
+        <div class="desc">Submitted with 1 evidence file. Awaiting assignment.</div>
+        <div class="meta"><span>TRK-8A11-0093</span><span>Filed Jun 29</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Chat</small></div>
+  <section>
+    <h2 class="section-title">Anonymous chat</h2>
+    <div class="chat-demo">
+      <div class="bubble them"><div class="who">Investigator</div>Could you upload the screenshot you mentioned?</div>
+      <div class="bubble me"><div class="who">You</div>Just added it — let me know if you need anything else.</div>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Navigation</small></div>
+  <section>
+    <h2 class="section-title">Dashboard shell</h2>
+    <div class="nav-demo">
+      <aside>
+        <div class="brand">MySafeSpeak</div>
+        <div class="item active">Home</div>
+        <div class="item">Reports</div>
+        <div class="item">Create Report</div>
+        <div class="item">Chat</div>
+        <div class="item">Notifications</div>
+        <div class="item">Settings</div>
+      </aside>
+      <main>Main content area — dashboard cards, report lists, and detail panels sit here.</main>
+    </div>
+  </section>
+
+  <div class="redaction"><span></span><span></span><span></span><small>Audit log</small></div>
+  <section>
+    <h2 class="section-title">Data tables</h2>
+    <table>
+      <thead><tr><th>User</th><th>Action</th><th>Report</th><th>Timestamp</th></tr></thead>
+      <tbody>
+        <tr><td>admin@co.com</td><td>Assigned investigator</td><td class="mono">TRK-2C9F-7841</td><td class="mono">2026-06-29 14:02</td></tr>
+        <tr><td>j.reyes@co.com</td><td>Updated status → Investigating</td><td class="mono">TRK-2C9F-7841</td><td class="mono">2026-06-29 14:10</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>MYSAFESPEAK · DESIGN SYSTEM · TOKENS DEFINED IN :ROOT — REUSE ACROSS ALL ROLE DASHBOARDS</p>
+  </footer>
+</div>
+
+</body>
+</html>

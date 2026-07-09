@@ -1,0 +1,24 @@
+/* Dark-theme token overrides. Loaded LAST on every page (after page-specific
+   CSS) so that toggling html[data-theme="dark"] via theme.js always wins,
+   regardless of specificity elsewhere. Split out of base/variables.css so
+   the light-mode tokens and the dark-mode overrides can be reasoned about
+   independently. */
+
+html[data-theme="dark"]{
+  --ink:#ECECEE;
+  --ink-70:#ECECEEb0;
+  --paper:#17181B;
+  --surface:#202126;
+  --harbor:#4FB8AC;
+  --harbor-dark:#8CE0D4;
+  --harbor-10:#4FB8AC26;
+  --signal:#E5A462;
+  --signal-10:#E5A46226;
+  --moss:#7FC48B;
+  --moss-10:#7FC48B26;
+  --brick:#D97C6C;
+  --brick-10:#D97C6C26;
+  --mist:#2C2D31;
+  --mist-dark:#3D3E44;
+  --redact:#F5F5F5;
+}

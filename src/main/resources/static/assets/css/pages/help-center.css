@@ -1,0 +1,37 @@
+.hero{ background:var(--ink-fixed); color:var(--paper-fixed); padding:56px 40px; text-align:center; }
+.hero h1{ font-family:var(--font-display); font-size:28px; font-weight:600; }
+.hero p{ color:#C7D2D1; font-size:14.5px; margin-top:8px; }
+.search-box{ max-width:480px; margin:26px auto 0; display:flex; gap:8px; }
+.search-box input{ flex:1; padding:13px 16px; border-radius:9px; border:none; font-size:14px; }
+.search-box button{ padding:13px 20px; border-radius:9px; border:none; background:var(--harbor); color:#fff; font-weight:600; cursor:pointer; }
+
+.content{ padding:40px 36px 80px; max-width:900px; margin:0 auto; }
+.cat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:44px; }
+.cat-card{ background:var(--surface); border:1px solid var(--mist); border-radius:12px; padding:20px; cursor:pointer; }
+.cat-card:hover{ border-color:var(--harbor); }
+.cat-card .ic{ width:34px; height:34px; border-radius:8px; background:var(--harbor-10); color:var(--harbor-dark); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-weight:700; font-size:12px; margin-bottom:12px; }
+.cat-card h3{ font-family:var(--font-display); font-size:14.5px; font-weight:600; }
+.cat-card p{ font-size:12px; color:var(--ink-70); margin-top:5px; }
+
+.sec-head{ margin:44px 0 16px; }
+.sec-head h2{ font-size:19px; }
+
+.faq-list{ max-width:760px; }
+.faq-item{ border-top:1px solid var(--mist); padding:18px 0; }
+.faq-item:last-child{ border-bottom:1px solid var(--mist); }
+.faq-item summary{ cursor:pointer; font-weight:600; font-size:14.5px; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+.faq-item summary::after{ content:'+'; font-family:var(--font-mono); font-size:17px; color:var(--harbor-dark); }
+.faq-item[open] summary::after{ content:'–'; }
+.faq-item p{ margin-top:10px; font-size:13px; color:var(--ink-70); max-width:62ch; }
+
+.guide-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.guide-card{ background:var(--surface); border:1px solid var(--mist); border-radius:10px; padding:18px 20px; }
+.guide-card h3{ font-family:var(--font-display); font-size:14.5px; font-weight:600; }
+.guide-card p{ font-size:12.5px; color:var(--ink-70); margin-top:6px; }
+.guide-card a{ font-size:12.5px; color:var(--harbor-dark); font-weight:600; margin-top:10px; display:inline-block; }
+
+.cta-band{ background:var(--ink-fixed); color:var(--paper-fixed); border-radius:14px; padding:36px 40px; display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; margin-top:44px; }
+.cta-band h2{ font-family:var(--font-display); font-size:20px; font-weight:600; }
+.cta-band p{ color:#C7D2D1; font-size:13px; margin-top:6px; }
+
+/* Responsive overrides for .cat-grid and .guide-grid now live in assets/css/responsive.css. */

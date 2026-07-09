@@ -1,0 +1,17 @@
+.role-tabs{ display:flex; gap:8px; margin-bottom:22px; }
+.role-tab{ padding:10px 18px; border:1.5px solid var(--mist-dark); border-radius:20px; font-size:13px; font-weight:600; cursor:pointer; background:var(--surface); }
+.role-tab.active{ background:var(--ink-fixed); color:#fff; border-color:var(--ink-fixed); }
+
+table.perm th{ padding:12px 18px; }
+table.perm td{ padding:14px 18px; font-size:13.5px; }
+table.perm th:last-child, table.perm td:last-child{ text-align:center; }
+table.perm th:nth-child(2), table.perm td:nth-child(2){ text-align:center; }
+
+.cat-row td{ background:var(--paper); font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-70); font-weight:700; padding:9px 18px; }
+.check{ width:20px; height:20px; border-radius:5px; border:1.5px solid var(--mist-dark); display:inline-flex; align-items:center; justify-content:center; cursor:pointer; }
+.check.on{ background:var(--harbor); border-color:var(--harbor); color:#fff; font-weight:700; font-size:12px; }
+.check.locked{ background:var(--paper); border-style:dashed; cursor:not-allowed; }
+.save-bar{ display:flex; justify-content:flex-end; margin-top:20px; }
+
+/* Responsive override for table.perm now lives in assets/css/responsive.css
+   (generic `table` rule makes it horizontally scrollable). */

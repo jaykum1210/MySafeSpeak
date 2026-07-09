@@ -1,0 +1,21 @@
+.stat-strip{ grid-template-columns:repeat(4,1fr); }
+
+.dept-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.dept-card{ background:var(--surface); border:1px solid var(--mist); border-radius:12px; padding:22px; }
+.dept-head{ display:flex; justify-content:space-between; align-items:flex-start; }
+.dept-head h3{ font-family:var(--font-display); font-size:16px; font-weight:600; }
+.dept-head .cnt{ font-family:var(--font-mono); font-size:11px; color:var(--ink-70); margin-top:4px; }
+.dept-menu{ font-size:12px; color:var(--harbor-dark); font-weight:600; cursor:pointer; }
+.dept-manager{ display:flex; align-items:center; gap:10px; margin-top:16px; padding-top:16px; border-top:1px solid var(--mist); }
+.dept-manager .av{ width:30px; height:30px; border-radius:50%; background:var(--paper); border:1px solid var(--mist); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:700; }
+.dept-manager .lbl{ font-size:11px; color:var(--ink-70); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:.04em; }
+.dept-manager .name{ font-size:13px; font-weight:600; }
+.dept-stats{ display:flex; gap:20px; margin-top:14px; }
+.dept-stats .item .k{ font-family:var(--font-mono); font-size:10px; color:var(--ink-70); text-transform:uppercase; letter-spacing:.04em; }
+.dept-stats .item .v{ font-size:15px; font-weight:700; margin-top:3px; }
+
+.add-card{ border:1.5px dashed var(--mist-dark); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; cursor:pointer; color:var(--ink-70); min-height:180px; }
+.add-card:hover{ border-color:var(--harbor); color:var(--harbor-dark); }
+.add-card .plus{ font-size:26px; font-weight:300; }
+
+/* Responsive override for .dept-grid now lives in assets/css/responsive.css. */

@@ -1,0 +1,56 @@
+/* ---- FORM CONTROLS ----
+   Reusable input/label/helper/toggle styles, used across every form in
+   the app (login, signup, create-report, settings, add-user, etc.).
+   Moved from layout/forms.css. The multi-step form primitive (.step),
+   grid helpers (.grid-2/.grid-3), and the auth split-screen shell stay
+   in layout/forms.css since they're page-shell/flow concerns rather
+   than individual controls. Per-page overrides stay in the page files. */
+
+.field{ margin-bottom:18px; text-align:left; }
+
+.field label{
+  display:block;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:7px;
+  color:var(--ink-70);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+
+.field input,
+.field select,
+.field textarea{
+  width:100%;
+  padding:12px 13px;
+  border:1.5px solid var(--mist-dark);
+  border-radius:7px;
+  font-family:var(--font-body);
+  font-size:14.5px;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{ outline:none; border-color:var(--harbor); background:var(--surface); }
+
+.helper{ font-size:12px; color:var(--ink-70); margin-top:6px; }
+.otp-row{ display:flex; gap:8px; }
+.otp-row input{
+  width:46px;
+  height:50px;
+  text-align:center;
+  font-family:var(--font-mono);
+  font-size:18px;
+  font-weight:600;
+  padding:0;
+}
+
+.toggle-row{ display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid var(--mist); }
+.toggle-row:last-child{ border-bottom:none; }
+.toggle-row .t{ font-size:13.5px; font-weight:500; }
+.switch{ width:42px; height:24px; border-radius:14px; background:var(--mist-dark); position:relative; cursor:pointer; flex-shrink:0; }
+.switch.on{ background:var(--harbor); }
+.switch .knob{ position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:#fff; transition:transform .15s ease; }
+.switch.on .knob{ transform:translateX(18px); }

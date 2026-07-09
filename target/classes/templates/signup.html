@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign up — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/signup.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+</head>
+<body>
+
+
+<div class="split">
+
+  <div class="panel-brand">
+    <div class="brand">MySafeSpeak</div>
+  <div class="msg">
+      <h1 id="brand-h1">Creating an account doesn't create a name.</h1>
+      <p id="brand-p">Your company email verifies you're an employee — nothing more. From here on, you're a token, not a name.</p>
+    </div>
+    <div class="foot">Encrypted in transit and at rest</div>
+  </div>
+
+  <div class="panel-form">
+    <div class="form-shell">
+
+      <!-- ================= ROLE SELECTION ================= -->
+      <div class="step active" id="step-role">
+        <div class="eyebrow">Sign up</div>
+        <h2>Which best describes you?</h2>
+        <p class="sub">This decides what info we need and how your account gets set up.</p>
+
+        <div class="role-grid">
+          <div class="role-card" onclick="chooseRole('reporter')">
+            <div class="ic">RPT</div>
+            <div><div class="t">Reporter</div><div class="d">File and track reports anonymously</div></div>
+            <div class="arrow">→</div>
+          </div>
+          <div class="role-card" onclick="chooseRole('investigator')">
+            <div class="ic">INV</div>
+            <div><div class="t">Investigator</div><div class="d">Review and resolve assigned cases</div></div>
+            <div class="arrow">→</div>
+          </div>
+          <div class="role-card" onclick="chooseRole('manager')">
+            <div class="ic">MGR</div>
+            <div><div class="t">Manager</div><div class="d">Oversee a department's reports and team</div></div>
+            <div class="arrow">→</div>
+          </div>
+          <div class="role-card" onclick="chooseRole('admin')">
+            <div class="ic">ADM</div>
+            <div><div class="t">Admin</div><div class="d">Manage users, departments, and system settings</div></div>
+            <div class="arrow">→</div>
+          </div>
+        </div>
+
+        <p class="foot-link">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+
+      <!-- ================= REPORTER FLOW ================= -->
+      <div class="progress hidden" id="progress-reporter">
+        <div class="seg current" id="rp1"></div>
+        <div class="seg" id="rp2"></div>
+        <div class="seg" id="rp3"></div>
+      </div>
+
+      <!-- Reporter step 1: email -->
+      <div class="step" id="step-r1">
+        <div class="back-link" onclick="backToRoles()">← Choose a different role</div>
+        <div class="eyebrow">Step 1 of 3</div>
+        <h2>Create your account</h2>
+        <p class="sub">Sign up with your company email as a Reporter.</p>
+
+        <form onsubmit="event.preventDefault(); signupShowStep('reporter', 2);">
+          <div class="field">
+            <label>Company email</label>
+            <input type="email" placeholder="you@company.com" required>
+            <div class="helper">Only used to confirm you work here — never shown to anyone reviewing your report.</div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Send verification code</button>
+        </form>
+
+        <p class="foot-link">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+
+      <!-- Reporter step 2: OTP -->
+      <div class="step" id="step-r2">
+        <div class="back-link" onclick="signupShowStep('reporter', 1)">← Back</div>
+        <div class="eyebrow">Step 2 of 3</div>
+        <h2>Verify your email</h2>
+        <p class="sub">Enter the 6-digit code we sent to your company email.</p>
+
+        <div class="field">
+          <label>One-time passcode</label>
+          <div class="otp-row">
+            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+          </div>
+          <div class="helper">Code expires in 10 minutes. <a href="#" onclick="return false" style="color:var(--harbor-dark); font-weight:600;">Resend</a></div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="button" onclick="signupShowStep('reporter', 3)">Verify</button>
+      </div>
+
+      <!-- Reporter step 3: password -->
+      <div class="step" id="step-r3">
+        <div class="back-link" onclick="signupShowStep('reporter', 2)">← Back</div>
+        <div class="eyebrow">Step 3 of 3</div>
+        <h2>Set a password</h2>
+        <p class="sub">This protects your reports — keep it somewhere safe.</p>
+
+        <form onsubmit="event.preventDefault(); signupShowStep('reporter', 4);">
+          <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••••" required>
+            <ul class="req-list">
+              <li>At least 8 characters</li>
+              <li>One number, one symbol</li>
+            </ul>
+          </div>
+          <div class="field">
+            <label>Confirm password</label>
+            <input type="password" placeholder="••••••••••" required>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Create account</button>
+        </form>
+      </div>
+
+      <!-- Reporter step 4: success -->
+      <div class="step" id="step-r4">
+        <div class="success-mark">✓</div>
+        <h2>Account created</h2>
+        <p class="sub">Redirecting you to your Reporter Dashboard…</p>
+        <div class="otp-note">This is where the dashboard mockup picks up next.</div>
+        <a href="reporter/reporter-dashboard.html" class="btn btn-primary btn-block" style="margin-top:16px;">Go to dashboard →</a>
+      </div>
+
+      <!-- ================= STAFF FLOW (Investigator / Manager / Admin) ================= -->
+      <div class="progress hidden" id="progress-staff">
+        <div class="seg current" id="sp1"></div>
+        <div class="seg" id="sp2"></div>
+        <div class="seg" id="sp3"></div>
+      </div>
+
+      <!-- Staff step 1: details -->
+      <div class="step" id="step-s1">
+        <div class="back-link" onclick="backToRoles()">← Choose a different role</div>
+        <div class="eyebrow">Step 1 of 3</div>
+        <h2>Tell us about you</h2>
+        <p class="sub">Staff accounts need a few more details for verification and department routing.</p>
+
+        <div class="role-chip-row">
+          <div class="t"><span>Signing up as</span><span id="role-chip-label">Investigator</span></div>
+          <a onclick="backToRoles()">Change</a>
+        </div>
+
+        <form onsubmit="event.preventDefault(); signupShowStep('staff', 2);">
+          <div class="grid-2">
+            <div class="field"><label>Full name</label><input type="text" placeholder="e.g. Amara Khan" required></div>
+            <div class="field"><label>Phone number</label><input type="tel" placeholder="+1 (___) ___-____" required></div>
+          </div>
+          <div class="field">
+            <label>Company email</label>
+            <input type="email" placeholder="you@company.com" required>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label>Department</label>
+              <select required>
+                <option value="">Select department</option>
+                <option>People & Culture</option>
+                <option>Finance & Ethics</option>
+                <option>Safety & Compliance</option>
+                <option>IT & Data Privacy</option>
+                <option>Legal</option>
+              </select>
+            </div>
+            <div class="field"><label>Designation</label><input type="text" placeholder="e.g. Senior Investigator" required></div>
+          </div>
+          <div class="field">
+            <label>Organization invite code</label>
+            <input type="text" placeholder="Provided by your Admin" required>
+            <div class="helper">Staff roles require an invite code from an existing Admin — this confirms you're authorized for this role.</div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Send verification code</button>
+        </form>
+
+        <p class="foot-link">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+
+      <!-- Staff step 2: OTP -->
+      <div class="step" id="step-s2">
+        <div class="back-link" onclick="signupShowStep('staff', 1)">← Back</div>
+        <div class="eyebrow">Step 2 of 3</div>
+        <h2>Verify your email</h2>
+        <p class="sub">Enter the 6-digit code we sent to your company email.</p>
+
+        <div class="field">
+          <label>One-time passcode</label>
+          <div class="otp-row">
+            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+          </div>
+          <div class="helper">Code expires in 10 minutes. <a href="#" onclick="return false" style="color:var(--harbor-dark); font-weight:600;">Resend</a></div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="button" onclick="signupShowStep('staff', 3)">Verify</button>
+      </div>
+
+      <!-- Staff step 3: password -->
+      <div class="step" id="step-s3">
+        <div class="back-link" onclick="signupShowStep('staff', 2)">← Back</div>
+        <div class="eyebrow">Step 3 of 3</div>
+        <h2>Set a password</h2>
+        <p class="sub">This protects your account and everything assigned to you.</p>
+
+        <form onsubmit="event.preventDefault(); signupShowStep('staff', 4);">
+          <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••••" required>
+            <ul class="req-list">
+              <li>At least 8 characters</li>
+              <li>One number, one symbol</li>
+            </ul>
+          </div>
+          <div class="field">
+            <label>Confirm password</label>
+            <input type="password" placeholder="••••••••••" required>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Create account</button>
+        </form>
+      </div>
+
+      <!-- Staff step 4: success (pending approval) -->
+      <div class="step" id="step-s4">
+        <div class="success-mark">✓</div>
+        <h2>Account submitted</h2>
+        <p class="sub" id="staff-success-sub">Your Investigator account is pending Admin approval.</p>
+        <div class="approval-note" id="staff-success-note">An Admin needs to verify your invite code and activate your account before you can log in. You'll get an email once it's approved.</div>
+        <a href="login.html" class="btn btn-secondary btn-block" style="margin-top:16px;">Back to log in</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

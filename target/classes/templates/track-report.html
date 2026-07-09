@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Report — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/track-report.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">No account needed</div>
+    <h1>Track your report</h1>
+    <p>Enter the tracking token you received when you submitted.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="track-box">
+    <div class="field">
+      <label>Tracking token</label>
+      <div class="track-row">
+        <input type="text" placeholder="TRK-XXXX-XXXX-XXX" value="TRK-2C9F-7841-K02">
+        <button>View report</button>
+      </div>
+      <div class="helper">This token was shown to you once, right after you submitted your report.</div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="result-card">
+    <div class="result-head">
+      <div>
+        <div class="cat">Workplace Harassment</div>
+        <h2>Repeated late-night messages from manager</h2>
+      </div>
+      <span class="stamp pending">Investigating</span>
+    </div>
+
+    <div class="kv-row">
+      <div class="kv"><div class="k">Tracking ID</div><div class="v">TRK-2C9F-7841-K02</div></div>
+      <div class="kv"><div class="k">Submitted</div><div class="v">Jun 24, 2026</div></div>
+      <div class="kv"><div class="k">Last updated</div><div class="v">Jun 30, 2026</div></div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item done"><div class="t">Report submitted</div><div class="d">Jun 24, 2026</div></div>
+      <div class="tl-item done"><div class="t">Assigned to investigator</div><div class="d">Jun 25, 2026</div></div>
+      <div class="tl-item"><div class="t">Under active investigation</div><div class="d">Ongoing</div></div>
+    </div>
+
+    <div class="login-note">
+      <span>Log in to see full case details, evidence, and message your investigator.</span>
+      <a href="login.html" class="btn btn-primary" style="padding:9px 16px; font-size:13px;">Log in</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

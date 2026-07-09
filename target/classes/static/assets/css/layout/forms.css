@@ -1,0 +1,34 @@
+/* Shared form-control styles (.field, .otp-row, .helper, .toggle-row,
+   .switch) now live in components/form-controls.css. */
+
+/* Multi-step form primitive, shared by login, signup, and create-report */
+.step{ display:none; }
+.step.active{ display:block; }
+
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.grid-3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+
+.back-link{ font-size:13px; color:var(--ink-70); display:inline-flex; align-items:center; gap:6px; margin-bottom:18px; cursor:pointer; }
+.back-link:hover{ color:var(--ink); }
+.foot-link{ text-align:center; margin-top:26px; font-size:13.5px; color:var(--ink-70); }
+.foot-link a{ color:var(--harbor-dark); font-weight:600; }
+
+/* Responsive overrides for .grid-2/.grid-3 now live in assets/css/responsive.css. */
+
+/* ---- Auth split-screen shell ----
+   Shared by login.css and signup.css. Page-specific sizing/copy
+   differences stay in those page files. */
+body{ min-height:100vh; }
+.split{ display:grid; grid-template-columns:1fr 1fr; min-height:100vh; }
+
+.panel-brand{ background:var(--ink-fixed); color:var(--paper-fixed); padding:52px; display:flex; flex-direction:column; justify-content:space-between; }
+.panel-brand .brand{ font-family:var(--font-display); font-weight:700; font-size:18px; display:flex; align-items:center; gap:9px; }
+.panel-brand .brand::before{ content:''; width:9px; height:9px; border-radius:50%; background:var(--harbor); box-shadow:0 0 0 4px var(--harbor-10); }
+.panel-brand .foot{ font-family:var(--font-mono); font-size:11px; color:#9db8b6; letter-spacing:.08em; text-transform:uppercase; }
+
+.form-shell .eyebrow{ font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-70); margin-bottom:10px; }
+.form-shell h2{ font-family:var(--font-display); font-size:26px; font-weight:600; }
+
+.otp-note{ background:var(--harbor-10); border:1px solid var(--harbor); border-radius:8px; padding:12px 14px; font-size:13px; color:var(--harbor-dark); margin-bottom:20px; }
+
+/* Responsive override for .split/.panel-brand now lives in assets/css/responsive.css. */

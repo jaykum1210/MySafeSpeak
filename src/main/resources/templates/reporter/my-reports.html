@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Reports — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/my-reports.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/reporter.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Reporter</div>
+  <a href="reporter-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="my-reports.html" class="item active" style="text-decoration:none;"><span class="dot"></span>My Reports</a>
+  <a href="create-report.html" class="item" style="text-decoration:none;"><span class="dot"></span>Create Report</a>
+  <a href="chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <div class="group-label">Support</div>
+  <a href="help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">Reporter · TRK-2C9F-7841</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <div>
+        <h1>My reports</h1>
+        <div class="sub">Everything you've submitted, in one place.</div>
+      </div>
+      <a href="create-report.html" class="btn btn-primary">+ New report</a>
+    </div>
+
+    <div class="content">
+
+      <div class="stat-strip">
+        <div class="stat-mini accent"><div class="lbl">Total reports</div><div class="val">4</div></div>
+        <div class="stat-mini"><div class="lbl">Real reports</div><div class="val">3</div></div>
+        <div class="stat-mini"><div class="lbl">Fake reports</div><div class="val">1</div></div>
+        <div class="stat-mini"><div class="lbl">Resolved</div><div class="val">1</div></div>
+        <div class="stat-mini"><div class="lbl">% real</div><div class="val">75%</div></div>
+      </div>
+
+      <div class="filter-bar">
+        <input type="text" placeholder="Search your reports...">
+        <div class="pill active">All</div>
+        <div class="pill">Current</div>
+        <div class="pill">Resolved</div>
+        <div class="pill">Fake</div>
+      </div>
+
+      <div class="sec-head"><h2>Current reports</h2></div>
+
+      <a href="report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark">HR</div>
+          <div class="info">
+            <div class="cat">Workplace Harassment</div>
+            <h3>Repeated late-night messages from manager</h3>
+            <div class="desc">Filed after several after-hours messages requesting personal meetings...</div>
+            <div class="meta">TRK-2C9F-7841 · Filed Jun 24</div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="chat.html" class="chat-link" style="text-decoration:none;">💬 Chat</a>
+          <span class="stamp pending">Investigating</span>
+        </div>
+      </div></a>
+
+      <a href="report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark brick">FR</div>
+          <div class="info">
+            <div class="cat">Fraud</div>
+            <h3>Expense report discrepancies in procurement</h3>
+            <div class="desc">Noticed inflated vendor invoices submitted over three months...</div>
+            <div class="meta">TRK-8A11-0093 · Filed Jun 29</div>
+          </div>
+        </div>
+        <div class="right">
+          <a href="chat.html" class="chat-link" style="text-decoration:none;">💬 Chat</a>
+          <span class="stamp new">New</span>
+        </div>
+      </div></a>
+
+      <div class="sec-head"><h2>Done reports</h2></div>
+
+      <div class="report-row">
+        <div class="left">
+          <div class="cat-mark">SF</div>
+          <div class="info">
+            <div class="cat">Safety Violation</div>
+            <h3>Blocked fire exit on 3rd floor</h3>
+            <div class="desc">Fire exit was found blocked with storage boxes for over a week...</div>
+            <div class="meta">TRK-4B02-5567 · Closed Jun 20</div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="stamp resolved">Real · Resolved</span>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="left">
+          <div class="cat-mark brick">DC</div>
+          <div class="info">
+            <div class="cat">Discrimination</div>
+            <h3>Unequal shift assignment claim</h3>
+            <div class="desc">Investigation found insufficient evidence to substantiate the claim...</div>
+            <div class="meta">TRK-1D77-2201 · Closed Jun 10</div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="stamp fake">Marked fake</span>
+          <button class="appeal-btn">Appeal</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
