@@ -38,7 +38,8 @@
    and keeps media/inputs from ever forcing a page wider than the
    viewport.
    ------------------------------------------------------------- */
-html, body{ max-width:100%; overflow-x:hidden; }
+html { max-width:100%; overflow-x:hidden; }
+body { max-width:100%; }
 img, svg, video{ max-width:100%; height:auto; }
 input, select, textarea{ max-width:100%; }
 pre, code{ max-width:100%; overflow-x:auto; }

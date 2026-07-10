@@ -1,118 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard — MySafeSpeak</title>
-<link rel="stylesheet" href="/assets/css/base/reset.css">
-<link rel="stylesheet" href="/assets/css/base/variables.css">
-<link rel="stylesheet" href="/assets/css/base/typography.css">
-<link rel="stylesheet" href="/assets/css/base/utilities.css">
-<link rel="stylesheet" href="/assets/css/layout/navbar.css">
-<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
-<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
-<link rel="stylesheet" href="/assets/css/layout/footer.css">
-<link rel="stylesheet" href="/assets/css/layout/forms.css">
-<link rel="stylesheet" href="/assets/css/components/button.css">
-<link rel="stylesheet" href="/assets/css/components/card.css">
-<link rel="stylesheet" href="/assets/css/components/table.css">
-<link rel="stylesheet" href="/assets/css/components/badge.css">
-<link rel="stylesheet" href="/assets/css/components/modal.css">
-<link rel="stylesheet" href="/assets/css/components/alert.css">
-<link rel="stylesheet" href="/assets/css/components/form-controls.css">
-<link rel="stylesheet" href="/assets/css/pages/admin-dashboard.css">
-<link rel="stylesheet" href="/assets/css/base/theme.css">
-<link rel="stylesheet" href="/assets/css/responsive.css">
-<script src="/assets/js/theme.js" defer></script>
-<script src="/assets/js/common.js" defer></script>
-<script src="/assets/js/admin.js" defer></script>
-</head>
-<body class="app-shell page-admin-dashboard">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — MySafeSpeak</title>
+    <link rel="stylesheet" href="/assets/css/base/reset.css" />
+    <link rel="stylesheet" href="/assets/css/base/variables.css" />
+    <link rel="stylesheet" href="/assets/css/base/typography.css" />
+    <link rel="stylesheet" href="/assets/css/base/utilities.css" />
+    <link rel="stylesheet" href="/assets/css/layout/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/layout/sidebar.css" />
+    <link rel="stylesheet" href="/assets/css/layout/dashboard.css" />
+    <link rel="stylesheet" href="/assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="/assets/css/layout/forms.css" />
+    <link rel="stylesheet" href="/assets/css/components/button.css" />
+    <link rel="stylesheet" href="/assets/css/components/card.css" />
+    <link rel="stylesheet" href="/assets/css/components/table.css" />
+    <link rel="stylesheet" href="/assets/css/components/badge.css" />
+    <link rel="stylesheet" href="/assets/css/components/modal.css" />
+    <link rel="stylesheet" href="/assets/css/components/alert.css" />
+    <link rel="stylesheet" href="/assets/css/components/form-controls.css" />
+    <link rel="stylesheet" href="/assets/css/pages/admin-dashboard.css" />
+    <link rel="stylesheet" href="/assets/css/base/theme.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <script src="/assets/js/theme.js" defer></script>
+    <script src="/assets/js/common.js" defer></script>
+    <script src="/assets/js/admin.js" defer></script>
+  </head>
+  <body class="app-shell page-admin-dashboard">
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">MySafeSpeak</div>
+        <div class="group-label">Admin</div>
+        <a
+          href="admin-dashboard.html"
+          class="item active"
+          style="text-decoration: none"
+          ><span class="dot"></span>Home</a
+        >
+        <a href="admin-reports.html" class="item" style="text-decoration: none"
+          ><span class="dot"></span>Reports</a
+        >
+        <a href="admin-users.html" class="item" style="text-decoration: none"
+          ><span class="dot"></span>Users</a
+        >
+        <a
+          href="admin-departments.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Departments</a
+        >
+        <a
+          href="admin-roles-permissions.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Roles & Permissions</a
+        >
+        <a
+          href="admin-analytics.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Analytics</a
+        >
+        <a
+          href="admin-audit-logs.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Audit Logs</a
+        >
+        <a
+          href="admin-notifications.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Notifications</a
+        >
+        <div class="group-label">Support</div>
+        <a
+          href="admin-help-center.html"
+          class="item"
+          style="text-decoration: none"
+          ><span class="dot"></span>Help Center</a
+        >
+        <a href="admin-settings.html" class="item" style="text-decoration: none"
+          ><span class="dot"></span>Settings</a
+        >
+        <div class="spacer"></div>
+        <div class="token-mini">
+          <div class="lbl">Signed in as</div>
+          <div class="val">R. Silva · Admin</div>
+        </div>
+      </aside>
 
-
-<div class="shell">
-
-  <aside class="sidebar">
-  <div class="brand">MySafeSpeak</div>
-  <div class="group-label">Admin</div>
-  <a href="admin-dashboard.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Home</a>
-  <a href="admin-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
-  <a href="admin-users.html" class="item" style="text-decoration:none;"><span class="dot"></span>Users</a>
-  <a href="admin-departments.html" class="item" style="text-decoration:none;"><span class="dot"></span>Departments</a>
-  <a href="admin-roles-permissions.html" class="item" style="text-decoration:none;"><span class="dot"></span>Roles & Permissions</a>
-  <a href="admin-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
-  <a href="admin-audit-logs.html" class="item" style="text-decoration:none;"><span class="dot"></span>Audit Logs</a>
-  <a href="admin-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
-  <div class="group-label">Support</div>
-  <a href="admin-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
-  <a href="admin-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
-  <div class="spacer"></div>
-  <div class="token-mini">
-    <div class="lbl">Signed in as</div>
-    <div class="val">R. Silva · Admin</div>
-  </div>
-</aside>
-
-  <div>
-    <div class="topbar">
       <div>
-        <h1>Admin overview</h1>
-        <div class="sub">System-wide status across all departments.</div>
-      </div>
-      <div class="avatar">AD</div>
-    </div>
-
-    <div class="content">
-
-      <div class="quick-grid">
-        <a href="admin-add-user.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">+U</div><h3>Add user</h3><p>Create an investigator, manager, or admin.</p></div></a>
-        <a href="admin-users.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">USR</div><h3>Manage users</h3><p>124 active accounts.</p></div></a>
-        <a href="admin-reports.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">RPT</div><h3>View reports</h3><p>9 need attention.</p></div></a>
-        <a href="admin-settings.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">SYS</div><h3>System settings</h3><p>Configure org-wide options.</p></div></a>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-card accent"><div class="lbl">Total reports</div><div class="val">148</div></div>
-        <div class="stat-card"><div class="lbl">Active reports</div><div class="val">19</div></div>
-        <div class="stat-card"><div class="lbl">Total users</div><div class="val">124</div></div>
-        <div class="stat-card"><div class="lbl">Investigators</div><div class="val">12</div></div>
-        <div class="stat-card"><div class="lbl">Managers</div><div class="val">6</div></div>
-        <div class="stat-card"><div class="lbl">Reporters</div><div class="val">104</div></div>
-        <div class="stat-card"><div class="lbl">Departments</div><div class="val">8</div></div>
-      </div>
-
-      <div class="sec-head"><h2>Recent reports</h2><a href="admin-reports.html">View all →</a></div>
-
-      <a href="admin-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
-        <div class="left"><div class="cat-mark">HR</div><div class="info"><div class="cat">Workplace Harassment · People & Culture</div><h3>Repeated late-night messages from manager</h3><div class="meta">TRK-2C9F-7841 · Filed Jun 24</div></div></div>
-        <span class="stamp pending">Investigating</span>
-      </div></a>
-      <a href="admin-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
-        <div class="left"><div class="cat-mark">FR</div><div class="info"><div class="cat">Fraud · Finance</div><h3>Expense report discrepancies in procurement</h3><div class="meta">TRK-8A11-0093 · Filed Jun 29</div></div></div>
-        <span class="stamp new">New</span>
-      </div></a>
-
-      <div class="lower-grid">
-        <div class="panel">
-          <h2>Recent user activity</h2>
-          <div class="activity-item"><div class="bullet"></div><div><div class="txt">New investigator account created for A. Khan</div><div class="time">Jun 30, 9:14 AM</div></div></div>
-          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Manager M. Okafor reassigned a case</div><div class="time">Jun 29, 4:02 PM</div></div></div>
-          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Password reset requested by reporter</div><div class="time">Jun 29, 11:20 AM</div></div></div>
+        <div class="topbar">
+          <div>
+            <h1>Admin overview</h1>
+            <div class="sub">System-wide status across all departments.</div>
+          </div>
+          <div class="avatar">AD</div>
         </div>
 
-        <div class="panel">
-          <h2>System health</h2>
-          <div class="health-row"><span>API status</span><span class="health-ok">Operational</span></div>
-          <div class="health-row"><span>Email / OTP delivery</span><span class="health-ok">Operational</span></div>
-          <div class="health-row"><span>File storage</span><span class="health-ok">Operational</span></div>
-          <div class="health-row"><span>Last backup</span><span style="font-family:var(--font-mono); font-size:12px; color:var(--ink-70);">Jul 1, 2026 — 2:00 AM</span></div>
+        <div class="content">
+          <div class="quick-grid">
+            <a
+              href="admin-add-user.html"
+              style="text-decoration: none; color: inherit"
+              ><div class="quick-card">
+                <div class="ic">+U</div>
+                <h3>Add user</h3>
+                <p>Create an investigator, manager, or admin.</p>
+              </div></a
+            >
+            <a
+              href="admin-users.html"
+              style="text-decoration: none; color: inherit"
+              ><div class="quick-card">
+                <div class="ic">USR</div>
+                <h3>Manage users</h3>
+                <p>124 active accounts.</p>
+              </div></a
+            >
+            <a
+              href="admin-reports.html"
+              style="text-decoration: none; color: inherit"
+              ><div class="quick-card">
+                <div class="ic">RPT</div>
+                <h3>View reports</h3>
+                <p>9 need attention.</p>
+              </div></a
+            >
+            <a
+              href="admin-settings.html"
+              style="text-decoration: none; color: inherit"
+              ><div class="quick-card">
+                <div class="ic">SYS</div>
+                <h3>System settings</h3>
+                <p>Configure org-wide options.</p>
+              </div></a
+            >
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat-card accent">
+              <div class="lbl">Total reports</div>
+              <div class="val">148</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Active reports</div>
+              <div class="val">19</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Total users</div>
+              <div class="val">124</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Investigators</div>
+              <div class="val">12</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Managers</div>
+              <div class="val">6</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Reporters</div>
+              <div class="val">104</div>
+            </div>
+            <div class="stat-card">
+              <div class="lbl">Departments</div>
+              <div class="val">8</div>
+            </div>
+          </div>
+
+          <div class="sec-head">
+            <h2>Recent reports</h2>
+            <a href="admin-reports.html">View all →</a>
+          </div>
+
+          <a
+            href="admin-reports.html"
+            style="text-decoration: none; color: inherit"
+            ><div class="report-row">
+              <div class="left">
+                <div class="cat-mark">HR</div>
+                <div class="info">
+                  <div class="cat">Workplace Harassment · People & Culture</div>
+                  <h3>Repeated late-night messages from manager</h3>
+                  <div class="meta">TRK-2C9F-7841 · Filed Jun 24</div>
+                </div>
+              </div>
+              <span class="stamp pending">Investigating</span>
+            </div></a
+          >
+          <a
+            href="admin-reports.html"
+            style="text-decoration: none; color: inherit"
+            ><div class="report-row">
+              <div class="left">
+                <div class="cat-mark">FR</div>
+                <div class="info">
+                  <div class="cat">Fraud · Finance</div>
+                  <h3>Expense report discrepancies in procurement</h3>
+                  <div class="meta">TRK-8A11-0093 · Filed Jun 29</div>
+                </div>
+              </div>
+              <span class="stamp new">New</span>
+            </div></a
+          >
+
+          <div class="lower-grid">
+            <div class="panel">
+              <h2>Recent user activity</h2>
+              <div class="activity-item">
+                <div class="bullet"></div>
+                <div>
+                  <div class="txt">
+                    New investigator account created for A. Khan
+                  </div>
+                  <div class="time">Jun 30, 9:14 AM</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="bullet"></div>
+                <div>
+                  <div class="txt">Manager M. Okafor reassigned a case</div>
+                  <div class="time">Jun 29, 4:02 PM</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="bullet"></div>
+                <div>
+                  <div class="txt">Password reset requested by reporter</div>
+                  <div class="time">Jun 29, 11:20 AM</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h2>System health</h2>
+              <div class="health-row">
+                <span>API status</span
+                ><span class="health-ok">Operational</span>
+              </div>
+              <div class="health-row">
+                <span>Email / OTP delivery</span
+                ><span class="health-ok">Operational</span>
+              </div>
+              <div class="health-row">
+                <span>File storage</span
+                ><span class="health-ok">Operational</span>
+              </div>
+              <div class="health-row">
+                <span>Last backup</span
+                ><span
+                  style="
+                    font-family: var(--font-mono);
+                    font-size: 12px;
+                    color: var(--ink-70);
+                  "
+                  >Jul 1, 2026 — 2:00 AM</span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-
-</div>
-
-</body>
+  </body>
 </html>
