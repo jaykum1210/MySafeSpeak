@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/manager-team.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/manager.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Manager</div>
+  <a href="manager-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="manager-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="manager-team.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Team</a>
+  <a href="manager-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="manager-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="manager-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="manager-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="manager-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">M. Okafor · Manager</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar"><h1>Team</h1></div>
+    <div class="content">
+
+      <div class="stat-strip">
+        <div class="stat-mini"><div class="lbl">Investigators</div><div class="val">5</div></div>
+        <div class="stat-mini"><div class="lbl">Active cases</div><div class="val">13</div></div>
+        <div class="stat-mini"><div class="lbl">Avg. workload</div><div class="val">2.6</div></div>
+        <div class="stat-mini"><div class="lbl">Avg. resolution</div><div class="val">4.1d</div></div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-head">
+          <div class="team-left"><div class="av">JR</div><div><h3>J. Reyes</h3><div class="role">Investigator · People & Culture</div></div></div>
+          <div class="team-actions"><button class="btn btn-secondary">Reassign case</button><button class="btn btn-ghost">View profile</button></div>
+        </div>
+        <div class="workload-bar-wrap">
+          <div class="workload-label"><span>Workload</span><span>4 of 6 cases</span></div>
+          <div class="workload-track"><div class="workload-fill" style="width:66%"></div></div>
+        </div>
+        <div class="perf-row">
+          <div class="perf-item"><div class="k">Assigned</div><div class="v">4</div></div>
+          <div class="perf-item"><div class="k">Resolved (90d)</div><div class="v">11</div></div>
+          <div class="perf-item"><div class="k">Avg. resolution</div><div class="v">3.8d</div></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-head">
+          <div class="team-left"><div class="av">AK</div><div><h3>A. Khan</h3><div class="role">Investigator · Finance & Ethics</div></div></div>
+          <div class="team-actions"><button class="btn btn-secondary">Reassign case</button><button class="btn btn-ghost">View profile</button></div>
+        </div>
+        <div class="workload-bar-wrap">
+          <div class="workload-label"><span>Workload</span><span>3 of 6 cases</span></div>
+          <div class="workload-track"><div class="workload-fill" style="width:50%"></div></div>
+        </div>
+        <div class="perf-row">
+          <div class="perf-item"><div class="k">Assigned</div><div class="v">3</div></div>
+          <div class="perf-item"><div class="k">Resolved (90d)</div><div class="v">9</div></div>
+          <div class="perf-item"><div class="k">Avg. resolution</div><div class="v">4.6d</div></div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-head">
+          <div class="team-left"><div class="av">SP</div><div><h3>S. Patel</h3><div class="role">Investigator · Safety & Compliance</div></div></div>
+          <div class="team-actions"><button class="btn btn-secondary">Reassign case</button><button class="btn btn-ghost">View profile</button></div>
+        </div>
+        <div class="workload-bar-wrap">
+          <div class="workload-label"><span>Workload</span><span>5 of 6 cases — near capacity</span></div>
+          <div class="workload-track"><div class="workload-fill high" style="width:83%"></div></div>
+        </div>
+        <div class="perf-row">
+          <div class="perf-item"><div class="k">Assigned</div><div class="v">5</div></div>
+          <div class="perf-item"><div class="k">Resolved (90d)</div><div class="v">14</div></div>
+          <div class="perf-item"><div class="k">Avg. resolution</div><div class="v">3.2d</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

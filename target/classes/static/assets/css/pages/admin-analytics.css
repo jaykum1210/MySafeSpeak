@@ -1,0 +1,30 @@
+/* Shared bar-chart primitives now live in components/charts.css.
+   Only admin-analytics-specific grid sizing and KPI cards remain here. */
+
+.topbar select{ padding:9px 12px; border:1.5px solid var(--mist-dark); border-radius:7px; font-size:13px; background:var(--surface); color:var(--ink); }
+
+.kpi-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:22px; }
+.kpi{ background:var(--surface); border:1px solid var(--mist); border-radius:12px; padding:20px; text-align:left; }
+.kpi .val{ font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--ink); }
+.kpi .lbl{ font-size:12px; color:var(--ink-70); margin-top:6px; }
+.kpi .delta{ font-size:11.5px; margin-top:6px; font-family:var(--font-mono); }
+.kpi .delta.up{ color:var(--moss); }
+.kpi .delta.down{ color:var(--brick); }
+
+.grid-2{ display:grid; grid-template-columns:1.4fr 1fr; gap:18px; }
+
+.trend{ display:flex; align-items:flex-end; gap:10px; height:140px; }
+.trend .stack{ width:100%; display:flex; flex-direction:column-reverse; border-radius:4px 4px 0 0; overflow:hidden; }
+.trend .seg{ width:100%; }
+
+.legend{ display:flex; flex-wrap:wrap; gap:14px; margin-top:16px; }
+
+.bar-row{ display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.bar-row .lbl{ width:120px; font-size:12px; color:var(--ink-70); flex-shrink:0; }
+.bar-row .num{ width:26px; text-align:right; font-family:var(--font-mono); font-size:12px; font-weight:600; flex-shrink:0; }
+
+.dept-perf{ width:100%; border-collapse:collapse; font-size:13px; }
+.dept-perf th{ text-align:left; font-family:var(--font-mono); font-size:10px; text-transform:uppercase; color:var(--ink-70); padding:8px 10px; border-bottom:1.5px solid var(--ink); }
+.dept-perf td{ padding:10px; border-bottom:1px solid var(--mist); }
+
+/* Responsive override for .kpi-grid now lives in assets/css/responsive.css. */

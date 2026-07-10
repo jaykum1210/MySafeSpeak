@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investigator Dashboard — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/investigator-dashboard.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/investigator.js" defer></script>
+</head>
+<body class="app-shell page-investigator-dashboard">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Investigator</div>
+  <a href="investigator-dashboard.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="investigator-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Assigned Reports</a>
+  <a href="investigator-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="investigator-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="investigator-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="investigator-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="investigator-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">J. Reyes · Investigator</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <div>
+        <h1>Welcome back, J. Reyes</h1>
+        <div class="sub">Here's what needs your attention today.</div>
+      </div>
+      <div class="avatar">JR</div>
+    </div>
+
+    <div class="content">
+
+      <div class="quick-grid">
+        <a href="investigator-reports.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">RPT</div><h3>View assigned reports</h3><p>7 cases currently on your desk.</p></div></a>
+        <a href="investigator-reports.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">REV</div><h3>Pending reviews</h3><p>3 reports awaiting your next action.</p></div></a>
+        <a href="investigator-chat.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">CHT</div><h3>Open chat</h3><p>2 unread messages from reporters.</p></div></a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card accent"><div class="lbl">Total assigned</div><div class="val">7</div></div>
+        <div class="stat-card"><div class="lbl">New</div><div class="val">2</div></div>
+        <div class="stat-card"><div class="lbl">Under investigation</div><div class="val">3</div></div>
+        <div class="stat-card"><div class="lbl">Awaiting response</div><div class="val">1</div></div>
+        <div class="stat-card"><div class="lbl">Resolved</div><div class="val">1</div></div>
+      </div>
+
+      <div class="sec-head"><h2>Recently assigned reports</h2><a href="investigator-reports.html">View all →</a></div>
+
+      <a href="investigator-report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark">HR</div>
+          <div class="info"><div class="cat">Workplace Harassment</div><h3>Repeated late-night messages from manager</h3><div class="meta">TRK-2C9F-7841 · Assigned Jun 25</div></div>
+        </div>
+        <span class="stamp pending">Investigating</span>
+      </div></a>
+      <a href="investigator-report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark brick">FR</div>
+          <div class="info"><div class="cat">Fraud</div><h3>Expense report discrepancies in procurement</h3><div class="meta">TRK-8A11-0093 · Assigned Jun 30</div></div>
+        </div>
+        <span class="stamp new">New</span>
+      </div></a>
+      <a href="investigator-report-detail.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left">
+          <div class="cat-mark">DP</div>
+          <div class="info"><div class="cat">Data Privacy Violation</div><h3>Customer records shared outside team</h3><div class="meta">TRK-5F03-1189 · Assigned Jun 28</div></div>
+        </div>
+        <span class="stamp waiting">Awaiting response</span>
+      </div></a>
+
+      <div class="lower-grid">
+        <div class="panel">
+          <h2>Investigation activity</h2>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Requested additional evidence on TRK-2C9F-7841</div><div class="time">Jun 27, 2:40 PM</div></div></div>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Added investigation note to TRK-8A11-0093</div><div class="time">Jun 30, 10:15 AM</div></div></div>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Marked TRK-4B02-5567 as Resolved</div><div class="time">Jun 20, 4:02 PM</div></div></div>
+        </div>
+
+        <div class="panel">
+          <h2>Recent chat messages</h2>
+          <div class="msg-item"><div class="av">RP</div><div class="body"><div class="t">TRK-2C9F-7841</div><div class="s">Just added it — let me know if you need anything...</div></div></div>
+          <div class="msg-item"><div class="av">RP</div><div class="body"><div class="t">TRK-5F03-1189</div><div class="s">I don't have anything further to add right now.</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

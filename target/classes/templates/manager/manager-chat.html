@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/chat.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/manager.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Manager</div>
+  <a href="manager-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="manager-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="manager-team.html" class="item" style="text-decoration:none;"><span class="dot"></span>Team</a>
+  <a href="manager-chat.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="manager-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="manager-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="manager-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="manager-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+</aside>
+
+  <div class="chat-list">
+    <div class="chat-list-head">
+      <h2>Chats</h2>
+      <input type="text" placeholder="Search chats...">
+    </div>
+    <div class="chat-items">
+      <div class="chat-item active">
+        <div class="top"><div class="title">J. Reyes</div><div class="time">2h ago</div></div>
+        <div class="tid">Re: TRK-2C9F-7841</div>
+        <div class="snippet">Just added it — let me know if...</div>
+        <div class="row2"><span class="stamp-mini pending">Investigating</span></div>
+      </div>
+      <div class="chat-item">
+        <div class="top"><div class="title">A. Khan</div><div class="time">1d ago</div></div>
+        <div class="tid">Re: TRK-8A11-0093</div>
+        <div class="snippet">Your report has been received.</div>
+        <div class="row2"><span class="stamp-mini new">New</span><span class="unread-dot"></span></div>
+      </div>
+      <div class="chat-item">
+        <div class="top"><div class="title">S. Patel</div><div class="time">Jun 20</div></div>
+        <div class="tid">Re: TRK-4B02-5567</div>
+        <div class="snippet">Case closed — resolved.</div>
+        <div class="row2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-window">
+    <div class="chat-window-head">
+      <div>
+        <div class="cw-title">J. Reyes</div>
+        <div class="cw-sub">Re: TRK-2C9F-7841 · Workplace Harassment</div>
+      </div>
+      <div class="cw-status">
+        <span class="stamp-mini pending" style="padding:5px 12px; font-size:11px;">Investigating</span>
+      </div>
+    </div>
+
+    <div class="messages">
+      <div class="sys-msg">Case TRK-2C9F-7841 assigned to J. Reyes</div>
+
+      <div class="msg-row them">
+        <div class="bubble">Wanted to flag that TRK-2C9F-7841 may need escalation given the pattern of messages.</div>
+        <div class="msg-meta">J. Reyes · 9:12 AM</div>
+      </div>
+
+      <div class="msg-row them">
+        <div class="bubble">Agreed — go ahead and request the Slack export as additional evidence.</div>
+        <div class="msg-meta">You · 9:13 AM</div>
+      </div>
+
+      <div class="sys-msg">Evidence requested</div>
+
+      <div class="msg-row me">
+        <div class="attach-bubble">
+          <div class="ic">PNG</div>
+          <span>message_thread.png</span>
+          <span class="dl">Download</span>
+        </div>
+        <div class="msg-meta">Seen · 2:41 PM</div>
+      </div>
+
+      <div class="msg-row me">
+        <div class="bubble">Just added it — let me know if you need anything else.</div>
+        <div class="msg-meta">Seen · 2:41 PM</div>
+      </div>
+    </div>
+
+    <div class="typing">J. Reyes is typing…</div>
+
+    <div class="composer">
+      <button class="icon-btn">📎</button>
+      <input type="text" placeholder="Type a message...">
+      <button class="send">→</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

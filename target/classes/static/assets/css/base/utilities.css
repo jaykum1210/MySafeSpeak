@@ -1,0 +1,11 @@
+.wrap{ max-width:1120px; margin:0 auto; padding:0 32px; }
+
+.redaction{ display:flex; gap:6px; align-items:center; }
+.redaction span{ display:block; height:9px; background:var(--redact); border-radius:1px; }
+.redaction span:nth-child(1){ width:30px; }
+.redaction span:nth-child(2){ width:12px; background:var(--harbor); }
+.redaction span:nth-child(3){ width:50px; }
+
+/* Shared button styles now live in components/button.css. */
+
+.hidden{ display:none !important; }

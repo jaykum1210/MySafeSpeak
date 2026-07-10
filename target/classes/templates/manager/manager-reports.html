@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports — MySafeSpeak Manager</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/reports.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/manager.js" defer></script>
+</head>
+<body class="app-shell page-reports">
+
+
+<div class="shell">
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Manager</div>
+  <a href="manager-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="manager-reports.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="manager-team.html" class="item" style="text-decoration:none;"><span class="dot"></span>Team</a>
+  <a href="manager-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="manager-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="manager-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="manager-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="manager-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">M. Okafor · Manager</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <h1>Department reports</h1>
+      <div class="actions">
+        <button class="btn btn-secondary">Export CSV</button>
+        <button class="btn btn-secondary">Export PDF</button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="stat-strip">
+        <div class="stat-mini"><div class="lbl">Total</div><div class="val">148</div></div>
+        <div class="stat-mini"><div class="lbl">New</div><div class="val">5</div></div>
+        <div class="stat-mini"><div class="lbl">Under review</div><div class="val">4</div></div>
+        <div class="stat-mini"><div class="lbl">Investigating</div><div class="val">10</div></div>
+        <div class="stat-mini"><div class="lbl">Resolved</div><div class="val">121</div></div>
+        <div class="stat-mini"><div class="lbl">Closed</div><div class="val">6</div></div>
+        <div class="stat-mini"><div class="lbl">Appealed</div><div class="val">2</div></div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-left">
+          <input type="text" placeholder="Search Report ID, Tracking ID...">
+          <select><option>All statuses</option><option>New</option><option>Under review</option><option>Investigating</option><option>Resolved</option><option>Appealed</option></select>
+          <select><option>All categories</option><option>Harassment</option><option>Fraud</option><option>Safety</option></select>
+          
+          <select><option>All investigators</option><option>J. Reyes</option><option>A. Khan</option></select>
+          <select><option>Newest first</option><option>Oldest first</option></select>
+        </div>
+        <span class="bulk-note">3 selected · <a href="#" onclick="return false" style="color:var(--harbor-dark); font-weight:600;">Bulk reassign</a></span>
+      </div>
+
+      <table class="reports">
+        <thead><tr><th></th><th>Report</th><th>Tracking ID</th><th>Category</th><th>Department</th><th>Assigned to</th><th>Filed</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr><td><input type="checkbox" checked></td><td><div class="title">Repeated late-night messages from manager</div></td><td class="mono">TRK-2C9F-7841</td><td>Harassment</td><td>People & Culture</td><td>J. Reyes</td><td class="mono">Jun 24</td><td><span class="stamp pending">Investigating</span></td><td><a href="#" onclick="return false" class="view-link">Assign / Open →</a></td></tr>
+          <tr><td><input type="checkbox" checked></td><td><div class="title">Expense report discrepancies</div></td><td class="mono">TRK-8A11-0093</td><td>Fraud</td><td>Finance</td><td>Unassigned</td><td class="mono">Jun 29</td><td><span class="stamp new">New</span></td><td><a href="#" onclick="return false" class="view-link">Assign / Open →</a></td></tr>
+          <tr><td><input type="checkbox" checked></td><td><div class="title">Customer records shared outside team</div></td><td class="mono">TRK-5F03-1189</td><td>Data Privacy</td><td>IT</td><td>A. Khan</td><td class="mono">Jun 28</td><td><span class="stamp pending">Investigating</span></td><td><a href="#" onclick="return false" class="view-link">Assign / Open →</a></td></tr>
+          <tr><td><input type="checkbox"></td><td><div class="title">Blocked fire exit on 3rd floor</div></td><td class="mono">TRK-4B02-5567</td><td>Safety</td><td>Safety & Compliance</td><td>S. Patel</td><td class="mono">Jun 12</td><td><span class="stamp resolved">Resolved</span></td><td><a href="#" onclick="return false" class="view-link">Assign / Open →</a></td></tr>
+          <tr><td><input type="checkbox"></td><td><div class="title">Unequal shift assignment claim</div></td><td class="mono">TRK-1D77-2201</td><td>Discrimination</td><td>Operations</td><td>J. Reyes</td><td class="mono">Jun 8</td><td><span class="stamp appealed">Appealed</span></td><td><a href="#" onclick="return false" class="view-link">Assign / Open →</a></td></tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Users — MySafeSpeak Admin</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/admin-users.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/admin.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Admin</div>
+  <a href="admin-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="admin-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="admin-users.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Users</a>
+  <a href="admin-departments.html" class="item" style="text-decoration:none;"><span class="dot"></span>Departments</a>
+  <a href="admin-roles-permissions.html" class="item" style="text-decoration:none;"><span class="dot"></span>Roles & Permissions</a>
+  <a href="admin-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <a href="admin-audit-logs.html" class="item" style="text-decoration:none;"><span class="dot"></span>Audit Logs</a>
+  <a href="admin-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <div class="group-label">Support</div>
+  <a href="admin-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="admin-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">R. Silva · Admin</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <h1>Users</h1>
+      <a href="admin-add-user.html" class="btn btn-primary">+ Add user</a>
+    </div>
+
+    <div class="content">
+
+      <div class="stat-strip">
+        <div class="stat-mini"><div class="lbl">Total users</div><div class="val">124</div></div>
+        <div class="stat-mini"><div class="lbl">Reporters</div><div class="val">104</div></div>
+        <div class="stat-mini"><div class="lbl">Investigators</div><div class="val">12</div></div>
+        <div class="stat-mini"><div class="lbl">Managers</div><div class="val">6</div></div>
+        <div class="stat-mini"><div class="lbl">Admins</div><div class="val">2</div></div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-left">
+          <input type="text" placeholder="Search users...">
+          <select><option>All roles</option><option>Reporter</option><option>Investigator</option><option>Manager</option><option>Admin</option></select>
+          <select><option>All departments</option><option>People & Culture</option><option>Finance</option><option>Safety</option></select>
+          <select><option>All statuses</option><option>Active</option><option>Pending</option><option>Disabled</option></select>
+        </div>
+      </div>
+
+      <table class="users">
+        <thead><tr><th>User</th><th>Role</th><th>Department</th><th>Email</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="user-cell"><div class="av">JR</div><div class="name">J. Reyes</div></div></td>
+            <td><span class="role-tag investigator">Investigator</span></td>
+            <td>People & Culture</td>
+            <td class="mono">j.reyes@company.com</td>
+            <td><span class="status-dot active">Active</span></td>
+            <td><div class="row-actions"><span>Edit</span><span>Reset PW</span><span class="danger">Disable</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av">AK</div><div class="name">A. Khan</div></div></td>
+            <td><span class="role-tag investigator">Investigator</span></td>
+            <td>Finance & Ethics</td>
+            <td class="mono">a.khan@company.com</td>
+            <td><span class="status-dot pending">Pending activation</span></td>
+            <td><div class="row-actions"><span>Edit</span><span>Resend OTP</span><span class="danger">Delete</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av">MO</div><div class="name">M. Okafor</div></div></td>
+            <td><span class="role-tag manager">Manager</span></td>
+            <td>People & Culture</td>
+            <td class="mono">m.okafor@company.com</td>
+            <td><span class="status-dot active">Active</span></td>
+            <td><div class="row-actions"><span>Edit</span><span>Reset PW</span><span class="danger">Disable</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av">SP</div><div class="name">S. Patel</div></div></td>
+            <td><span class="role-tag investigator">Investigator</span></td>
+            <td>Safety & Compliance</td>
+            <td class="mono">s.patel@company.com</td>
+            <td><span class="status-dot disabled">Disabled</span></td>
+            <td><div class="row-actions"><span>Edit</span><span>Enable</span><span class="danger">Delete</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="user-cell"><div class="av">RS</div><div class="name">R. Silva</div></div></td>
+            <td><span class="role-tag admin">Admin</span></td>
+            <td>—</td>
+            <td class="mono">r.silva@company.com</td>
+            <td><span class="status-dot active">Active</span></td>
+            <td><div class="row-actions"><span>Edit</span><span>Reset PW</span><span class="danger">Disable</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

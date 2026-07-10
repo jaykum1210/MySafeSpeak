@@ -1,0 +1,47 @@
+/* ---- BUTTON ----
+   Reusable button styles, used across every page in the app.
+   Moved from base/utilities.css (.btn family) and layout/dashboard.css
+   (.icon-btn). Page-specific overrides (e.g. .composer .icon-btn in
+   chat.css) stay in their page files. */
+
+.btn{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:14.5px;
+  padding:12px 22px;
+  border-radius:8px;
+  border:1.5px solid transparent;
+  cursor:pointer;
+  transition:all .12s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+
+.btn:active{ transform:translateY(1px); }
+.btn-primary{ background:var(--harbor); color:#fff; }
+.btn-primary:hover{ background:var(--harbor-dark); }
+.btn-secondary{ background:transparent; color:var(--ink); border-color:var(--mist-dark); }
+.btn-secondary:hover{ border-color:var(--ink); }
+.btn-ghost{ background:transparent; color:var(--harbor-dark); padding:12px 4px; }
+.btn-ghost:hover{ text-decoration:underline; }
+.btn-block{ width:100%; justify-content:center; }
+.btn-google{ background:#fff; color:var(--ink-fixed); border-color:var(--mist-dark); }
+.btn-google:hover{ border-color:var(--ink); }
+.btn-danger{ background:var(--brick); color:#fff; }
+
+.icon-btn{
+  width:38px;
+  height:38px;
+  border-radius:8px;
+  border:1px solid var(--mist-dark);
+  background:var(--surface);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-mono);
+  font-size:13px;
+  cursor:pointer;
+  position:relative;
+  color:var(--ink);
+}

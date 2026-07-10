@@ -1,0 +1,29 @@
+/* Shared timeline rules now live in components/timeline.css.
+   Only track-report-specific layout remains here. */
+
+.hero{ background:var(--ink-fixed); color:var(--paper-fixed); padding:70px 0 60px; text-align:center; }
+.hero .eyebrow{ font-family:var(--font-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#9db8b6; }
+.hero h1{ font-family:var(--font-display); font-weight:700; font-size:clamp(28px,4vw,40px); margin-top:14px; }
+.hero p{ color:#C7D2D1; font-size:14.5px; margin-top:10px; }
+
+.track-box{ max-width:560px; margin:-34px auto 0; background:var(--surface); border:1px solid var(--mist); border-radius:14px; padding:28px; box-shadow:0 10px 30px rgba(18,33,60,0.12); position:relative; z-index:2; }
+.track-box .field label{ margin-bottom:8px; }
+.track-row{ display:flex; gap:10px; }
+.track-row input{ flex:1; padding:13px 15px; border:1.5px solid var(--mist-dark); border-radius:8px; font-family:var(--font-mono); font-size:14.5px; }
+.track-row input:focus{ outline:none; border-color:var(--harbor); }
+.track-row button{ padding:13px 22px; border-radius:8px; border:none; background:var(--harbor); color:#fff; font-weight:600; cursor:pointer; }
+
+.content{ max-width:640px; margin:56px auto 100px; padding:0 24px; }
+.result-card{ background:var(--surface); border:1px solid var(--mist); border-radius:12px; padding:26px; margin-top:10px; }
+.result-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; margin-bottom:20px; }
+.result-head .cat{ font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-70); }
+.result-head h2{ font-family:var(--font-display); font-size:19px; font-weight:600; margin-top:4px; }
+
+.kv-row{ display:flex; gap:24px; flex-wrap:wrap; margin-bottom:20px; }
+.kv .v{ font-size:13.5px; margin-top:4px; font-weight:600; }
+
+.timeline{ position:relative; padding-left:24px; margin-bottom:22px; }
+.tl-item{ position:relative; padding-bottom:18px; }
+.tl-item .d{ font-family:var(--font-mono); font-size:11px; color:var(--ink-70); }
+
+.login-note{ background:var(--harbor-10); border:1px solid var(--harbor); border-radius:8px; padding:14px 16px; font-size:13px; color:var(--harbor-dark); display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }

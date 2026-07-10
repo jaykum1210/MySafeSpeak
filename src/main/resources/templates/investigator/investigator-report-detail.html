@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Detail — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/investigator-report-detail.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/investigator.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Investigator</div>
+  <a href="investigator-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="investigator-reports.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Assigned Reports</a>
+  <a href="investigator-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="investigator-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="investigator-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="investigator-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="investigator-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">J. Reyes · Investigator</div>
+  </div>
+</aside>
+
+  <div class="content">
+
+    <div class="breadcrumb"><a href="investigator-reports.html">Assigned Reports</a> / TRK-2C9F-7841</div>
+
+    <div class="head-row">
+      <div><div class="cat">Workplace Harassment</div><h1>Repeated late-night messages from manager</h1></div>
+      <span class="stamp pending">Investigating</span>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card"><div class="k">Tracking ID</div><div class="v mono">TRK-2C9F-7841</div></div>
+      <div class="info-card"><div class="k">Submitted</div><div class="v">Jun 24, 2026</div></div>
+      <div class="info-card"><div class="k">Assigned</div><div class="v">Jun 25, 2026</div></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="panel">
+          <h2>Report information</h2>
+          <p class="body-txt">Received several messages outside of working hours requesting one-on-one meetings unrelated to work. Messages continued after being asked to stop, creating a pattern over roughly two weeks. Location: Remote / Slack DM. Date of incident: Jun 22, ~9:40 PM (approx.).</p>
+        </div>
+
+        <div class="panel">
+          <h2>Evidence</h2>
+          <div class="evidence-grid">
+            <div class="evidence-item">message_thread.png</div>
+            <div class="evidence-item">voice_memo.mp3</div>
+          </div>
+          <button class="btn btn-secondary" style="margin-top:14px;">Request additional evidence</button>
+        </div>
+
+        <div class="panel">
+          <h2>Investigation timeline</h2>
+          <div class="timeline">
+            <div class="tl-item done"><div class="t">Report submitted</div><div class="d">Jun 24, 2026</div></div>
+            <div class="tl-item done"><div class="t">Assigned to you</div><div class="d">Jun 25, 2026</div></div>
+            <div class="tl-item done"><div class="t">Evidence requested</div><div class="d">Jun 27, 2026</div></div>
+            <div class="tl-item"><div class="t">Under active investigation</div><div class="d">Ongoing</div></div>
+          </div>
+        </div>
+
+        <div class="panel private">
+          <h2>Internal investigation notes</h2>
+          <div class="note-item">Cross-referenced timestamps with Slack export — pattern confirmed across 6 messages.<div class="meta">J. Reyes · Jun 28, 2026</div></div>
+          <div class="note-item">Flagged for possible policy escalation pending reporter follow-up.<div class="meta">J. Reyes · Jun 29, 2026</div></div>
+          <div class="note-add">
+            <textarea placeholder="Add a private note (not visible to the reporter)..."></textarea>
+            <button class="btn btn-secondary">Add note</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Anonymous chat</h2>
+          <p class="body-txt" style="margin-bottom:14px;">2 unread messages from the reporter.</p>
+          <a href="investigator-chat.html" class="btn btn-secondary">Open chat →</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel">
+          <h2>Assigned to</h2>
+          <div class="assignee"><div class="av">JR</div><div><div style="font-weight:600; font-size:13.5px;">J. Reyes</div><div style="font-size:11.5px; color:var(--ink-70);">You</div></div></div>
+        </div>
+
+        <div class="panel action-panel">
+          <h2>Update status</h2>
+          <div class="field">
+            <label>Case status</label>
+            <select><option>New</option><option selected>Under investigation</option><option>Awaiting reporter response</option><option>Resolved</option></select>
+          </div>
+          <button class="btn btn-primary btn-block">Save status</button>
+        </div>
+
+        <div class="panel action-panel">
+          <h2>Investigation outcome</h2>
+          <div class="field">
+            <label>Outcome</label>
+            <select><option>Substantiated</option><option>Unsubstantiated</option><option>Inconclusive</option><option>Marked as fake</option></select>
+          </div>
+          <div class="field">
+            <label>Summary</label>
+            <textarea placeholder="Summary shared with the reporter and manager on close."></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="btn btn-secondary btn-block">Save draft outcome</button>
+            <button class="btn btn-danger btn-block">Close & resolve report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

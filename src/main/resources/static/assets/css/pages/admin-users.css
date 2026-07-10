@@ -1,0 +1,30 @@
+.stat-strip{ grid-template-columns:repeat(5,1fr); }
+
+.filter-bar input{ padding:10px 14px; font-size:13.5px; width:220px; }
+.filter-bar select{ padding:10px 12px; font-size:13px; }
+
+table.users th{ padding:12px 16px; }
+table.users td{ padding:13px 16px; font-size:13.5px; }
+td.mono{ font-size:12px; color:var(--ink-70); }
+
+.user-cell{ display:flex; align-items:center; gap:10px; }
+.user-cell .av{ width:32px; height:32px; border-radius:50%; background:var(--paper); border:1px solid var(--mist); display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:700; flex-shrink:0; }
+.user-cell .name{ font-weight:600; }
+
+.role-tag{ font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:.05em; padding:4px 9px; border-radius:5px; border:1px solid var(--mist-dark); color:var(--ink-70); }
+.role-tag.investigator{ border-color:var(--harbor); color:var(--harbor-dark); background:var(--harbor-10); }
+.role-tag.manager{ border-color:#7A5FB0; color:#7A5FB0; background:#7A5FB01a; }
+.role-tag.admin{ border-color:var(--brick); color:var(--brick); background:var(--brick-10); }
+
+.status-dot{ display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:600; }
+.status-dot::before{ content:''; width:7px; height:7px; border-radius:50%; }
+.status-dot.active::before{ background:var(--moss); }
+.status-dot.pending::before{ background:var(--signal); }
+.status-dot.disabled::before{ background:var(--brick); }
+
+.row-actions{ display:flex; gap:10px; }
+.row-actions span{ font-size:12px; color:var(--harbor-dark); font-weight:600; cursor:pointer; }
+.row-actions .danger{ color:var(--brick); }
+
+/* Responsive override for table.users now lives in assets/css/responsive.css
+   (generic `table` rule makes it horizontally scrollable). */

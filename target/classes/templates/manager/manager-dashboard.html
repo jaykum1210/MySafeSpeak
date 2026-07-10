@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager Dashboard — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/manager-dashboard.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/manager.js" defer></script>
+</head>
+<body class="app-shell page-manager-dashboard">
+
+
+<div class="shell">
+
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Manager</div>
+  <a href="manager-dashboard.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="manager-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="manager-team.html" class="item" style="text-decoration:none;"><span class="dot"></span>Team</a>
+  <a href="manager-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="manager-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="manager-analytics.html" class="item" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="manager-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="manager-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">M. Okafor · Manager</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar">
+      <div>
+        <h1>Welcome back, M. Okafor</h1>
+        <div class="sub">People & Culture department overview.</div>
+      </div>
+      <div class="avatar">MO</div>
+    </div>
+
+    <div class="content">
+
+      <div class="quick-grid">
+        <a href="manager-reports.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">REV</div><h3>Review reports</h3><p>4 reports pending your review.</p></div></a>
+        <a href="manager-team.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">ASN</div><h3>Assign investigators</h3><p>2 new reports need assignment.</p></div></a>
+        <a href="manager-chat.html" style="text-decoration:none; color:inherit;"><div class="quick-card"><div class="ic">CHT</div><h3>Open chat</h3><p>1 unread message.</p></div></a>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card accent"><div class="lbl">Total reports</div><div class="val">22</div></div>
+        <div class="stat-card"><div class="lbl">Pending review</div><div class="val">4</div></div>
+        <div class="stat-card"><div class="lbl">Investigating</div><div class="val">7</div></div>
+        <div class="stat-card"><div class="lbl">Awaiting approval</div><div class="val">2</div></div>
+        <div class="stat-card"><div class="lbl">Resolved</div><div class="val">7</div></div>
+        <div class="stat-card"><div class="lbl">Closed</div><div class="val">2</div></div>
+      </div>
+
+      <div class="sec-head"><h2>Recent reports</h2><a href="manager-reports.html">View all →</a></div>
+
+      <a href="manager-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left"><div class="cat-mark">HR</div><div class="info"><div class="cat">Workplace Harassment</div><h3>Repeated late-night messages from manager</h3><div class="meta">TRK-2C9F-7841 · Filed Jun 24</div></div></div>
+        <span class="stamp pending">Investigating</span>
+      </div></a>
+      <a href="manager-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left"><div class="cat-mark brick">FR</div><div class="info"><div class="cat">Fraud</div><h3>Expense report discrepancies in procurement</h3><div class="meta">TRK-8A11-0093 · Filed Jun 29</div></div></div>
+        <span class="stamp new">Needs assignment</span>
+      </div></a>
+      <a href="manager-reports.html" style="text-decoration:none; color:inherit;"><div class="report-row">
+        <div class="left"><div class="cat-mark">SF</div><div class="info"><div class="cat">Safety Violation</div><h3>Blocked fire exit on 3rd floor</h3><div class="meta">TRK-4B02-5567 · Outcome ready</div></div></div>
+        <span class="stamp approval">Awaiting approval</span>
+      </div></a>
+
+      <div class="lower-grid">
+        <div class="panel">
+          <h2>Team activity</h2>
+          <div class="team-item"><div class="av">JR</div><div class="body"><div class="t">J. Reyes</div><div class="s">4 assigned · marked TRK-4B02-5567 resolved</div></div></div>
+          <div class="team-item"><div class="av">AK</div><div class="body"><div class="t">A. Khan</div><div class="s">3 assigned · requested evidence on TRK-5F03</div></div></div>
+          <div class="team-item"><div class="av">SP</div><div class="body"><div class="t">S. Patel</div><div class="s">2 assigned · no recent activity</div></div></div>
+        </div>
+
+        <div class="panel">
+          <h2>Recent notifications</h2>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">New report filed — awaiting assignment</div><div class="time">1h ago</div></div></div>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">Investigation outcome ready for approval on TRK-4B02-5567</div><div class="time">3h ago</div></div></div>
+          <div class="activity-item"><div class="bullet"></div><div><div class="txt">J. Reyes closed TRK-1D77-2201</div><div class="time">Yesterday</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

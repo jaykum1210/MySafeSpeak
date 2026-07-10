@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics — MySafeSpeak Admin</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/admin-analytics.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/admin.js" defer></script>
+</head>
+<body class="app-shell page-admin-analytics">
+
+
+<div class="shell">
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Admin</div>
+  <a href="admin-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="admin-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Reports</a>
+  <a href="admin-users.html" class="item" style="text-decoration:none;"><span class="dot"></span>Users</a>
+  <a href="admin-departments.html" class="item" style="text-decoration:none;"><span class="dot"></span>Departments</a>
+  <a href="admin-roles-permissions.html" class="item" style="text-decoration:none;"><span class="dot"></span>Roles & Permissions</a>
+  <a href="admin-analytics.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <a href="admin-audit-logs.html" class="item" style="text-decoration:none;"><span class="dot"></span>Audit Logs</a>
+  <a href="admin-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <div class="group-label">Support</div>
+  <a href="admin-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="admin-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">R. Silva · Admin</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar"><h1>Analytics</h1><select><option>Last 6 months</option><option>Last 12 months</option><option>All time</option></select></div>
+    <div class="content">
+
+      <div class="kpi-grid">
+        <div class="kpi"><div class="val">148</div><div class="lbl">Total reports filed</div><div class="delta up">↑ 12% vs last period</div></div>
+        <div class="kpi"><div class="val">4.1 days</div><div class="lbl">Avg. resolution time</div><div class="delta up">↓ 0.6d faster</div></div>
+        <div class="kpi"><div class="val">89%</div><div class="lbl">Resolution rate</div><div class="delta up">↑ 3%</div></div>
+        <div class="kpi"><div class="val">6.2%</div><div class="lbl">Marked fake / rejected</div><div class="delta down">↑ 1.1%</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Reports filed by month</h2>
+          <div class="trend">
+            <div class="col"><div class="stack" style="height:70px;"><div class="seg" style="height:40px; background:var(--harbor);"></div><div class="seg" style="height:20px; background:var(--signal);"></div><div class="seg" style="height:10px; background:var(--moss);"></div></div><div class="lbl">Jan</div></div>
+            <div class="col"><div class="stack" style="height:85px;"><div class="seg" style="height:50px; background:var(--harbor);"></div><div class="seg" style="height:25px; background:var(--signal);"></div><div class="seg" style="height:10px; background:var(--moss);"></div></div><div class="lbl">Feb</div></div>
+            <div class="col"><div class="stack" style="height:60px;"><div class="seg" style="height:35px; background:var(--harbor);"></div><div class="seg" style="height:15px; background:var(--signal);"></div><div class="seg" style="height:10px; background:var(--moss);"></div></div><div class="lbl">Mar</div></div>
+            <div class="col"><div class="stack" style="height:105px;"><div class="seg" style="height:60px; background:var(--harbor);"></div><div class="seg" style="height:30px; background:var(--signal);"></div><div class="seg" style="height:15px; background:var(--moss);"></div></div><div class="lbl">Apr</div></div>
+            <div class="col"><div class="stack" style="height:95px;"><div class="seg" style="height:55px; background:var(--harbor);"></div><div class="seg" style="height:25px; background:var(--signal);"></div><div class="seg" style="height:15px; background:var(--moss);"></div></div><div class="lbl">May</div></div>
+            <div class="col"><div class="stack" style="height:130px;"><div class="seg" style="height:75px; background:var(--harbor-dark);"></div><div class="seg" style="height:35px; background:var(--signal);"></div><div class="seg" style="height:20px; background:var(--moss);"></div></div><div class="lbl">Jun</div></div>
+          </div>
+          <div class="legend">
+            <div class="li"><span class="dot" style="background:var(--harbor)"></span>Harassment/Discrimination</div>
+            <div class="li"><span class="dot" style="background:var(--signal)"></span>Fraud/Financial</div>
+            <div class="li"><span class="dot" style="background:var(--moss)"></span>Safety/Other</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Reports by category</h2>
+          <div class="bar-row"><div class="lbl">Harassment</div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><div class="num">38</div></div>
+          <div class="bar-row"><div class="lbl">Fraud</div><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><div class="num">28</div></div>
+          <div class="bar-row"><div class="lbl">Safety</div><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><div class="num">24</div></div>
+          <div class="bar-row"><div class="lbl">Discrimination</div><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><div class="num">18</div></div>
+          <div class="bar-row"><div class="lbl">Data Privacy</div><div class="bar-track"><div class="bar-fill" style="width:28%"></div></div><div class="num">13</div></div>
+          <div class="bar-row"><div class="lbl">Other</div><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><div class="num">9</div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Department performance</h2>
+        <table class="dept-perf">
+          <thead><tr><th>Department</th><th>Filed</th><th>Resolved</th><th>Avg. time</th><th>Resolution rate</th></tr></thead>
+          <tbody>
+            <tr><td>People & Culture</td><td>42</td><td>34</td><td>3.8d</td><td>81%</td></tr>
+            <tr><td>Finance & Ethics</td><td>27</td><td>20</td><td>5.1d</td><td>74%</td></tr>
+            <tr><td>Safety & Compliance</td><td>31</td><td>26</td><td>3.2d</td><td>84%</td></tr>
+            <tr><td>IT & Data Privacy</td><td>14</td><td>11</td><td>2.9d</td><td>79%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

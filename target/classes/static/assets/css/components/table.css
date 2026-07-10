@@ -1,0 +1,38 @@
+/* ---- TABLE ----
+   Shared data-table styles (used by reports, users, and permissions
+   tables). Moved from layout/dashboard.css. Per-page cell padding/
+   sizing overrides stay in the page files (e.g. reports.css,
+   admin-users.css, admin-roles-permissions.css, investigator-reports.css). */
+
+table.reports,
+table.users,
+table.perm{
+  width:100%;
+  border-collapse:collapse;
+  background:var(--surface);
+  border:1px solid var(--mist);
+  border-radius:12px;
+  overflow:hidden;
+}
+
+table.reports th,
+table.users th,
+table.perm th{
+  text-align:left;
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  color:var(--ink-70);
+  background:var(--paper);
+  border-bottom:1px solid var(--mist);
+}
+
+table.reports td,
+table.users td,
+table.perm td{ border-bottom:1px solid var(--mist); vertical-align:middle; }
+table.reports tr:last-child td,
+table.users tr:last-child td,
+table.perm tr:last-child td{ border-bottom:none; }
+table.reports tr:hover td,
+table.users tr:hover td{ background:var(--harbor-10); }

@@ -1,0 +1,56 @@
+/* ---- BADGE ----
+   Reusable status/notification badge styles, used across every page
+   in the app. Moved from layout/dashboard.css (.icon-btn .badge, .stamp)
+   and pages/settings.css (.badge). Page-scoped variants that only ever
+   appear on one page (e.g. .lock-row .badge in landing.css,
+   .stamp-mini in chat.css) stay in their page files. */
+
+.icon-btn .badge{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:var(--signal);
+  color:#fff;
+  font-size:9.5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-body);
+  font-weight:700;
+}
+
+.badge{ font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; padding:4px 10px; border-radius:5px; border:1px solid var(--moss); color:var(--moss); background:var(--moss-10); }
+
+.stamp{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:5px 11px;
+  border-radius:5px;
+  border:1.5px solid currentColor;
+}
+
+.stamp::before{
+  content:'';
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:currentColor;
+}
+
+.stamp.new{ color:var(--harbor-dark); background:var(--harbor-10); }
+.stamp.pending{ color:var(--signal); background:var(--signal-10); }
+.stamp.resolved{ color:var(--moss); background:var(--moss-10); }
+.stamp.waiting{ color:#7A5FB0; background:#7A5FB01a; }
+.stamp.appealed{ color:#7A5FB0; background:#7A5FB01a; }
+.stamp.approval{ color:#7A5FB0; background:#7A5FB01a; }
+.stamp.fake{ color:var(--brick); background:var(--brick-10); }
+.stamp.urgent{ color:var(--brick); background:var(--brick-10); }

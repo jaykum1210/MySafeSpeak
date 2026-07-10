@@ -1,0 +1,100 @@
+body.app-shell{ background:var(--paper); }
+
+.shell{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  min-height:100vh;
+}
+
+.sidebar{
+  background:var(--ink-fixed);
+  color:var(--paper-fixed);
+  padding:26px 18px;
+  display:flex;
+  flex-direction:column;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow-y:auto;
+}
+
+.sidebar .brand{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:17px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  padding:0 10px;
+  margin-bottom:34px;
+}
+
+.sidebar .brand::before{
+  content:'';
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--harbor);
+  box-shadow:0 0 0 4px var(--harbor-10);
+}
+
+.sidebar .group-label{
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#7f9391;
+  padding:0 10px;
+  margin:18px 0 8px;
+}
+
+.sidebar .item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13.5px;
+  color:#B9C4C3;
+  padding:10px 12px;
+  border-radius:8px;
+  margin-bottom:3px;
+  font-weight:500;
+}
+
+.sidebar .item .dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:currentColor;
+  opacity:.5;
+}
+
+.sidebar .item:hover{ background:#1c2f4a; color:#fff; }
+.sidebar .item.active{ background:var(--harbor); color:#fff; }
+.sidebar .item.active .dot{ opacity:1; }
+.sidebar .spacer{ flex:1; }
+
+.sidebar .token-mini{
+  background:#1c2f4a;
+  border-radius:8px;
+  padding:14px;
+  font-family:var(--font-mono);
+}
+
+.sidebar .token-mini .lbl{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color:#7f9391;
+}
+
+.sidebar .token-mini .val{ font-size:12.5px; margin-top:4px; color:#dfe8e7; }
+
+/* Hamburger button (injected by assets/js/common.js) and the sidebar
+   backdrop are hidden on desktop by default; assets/css/responsive.css
+   shows them and turns .sidebar into an off-canvas panel on tablet
+   and mobile. */
+.hamburger-btn{ display:none; }
+.sidebar-backdrop{ display:none; }
+
+/* Responsive breakpoint overrides for this file now live in
+   assets/css/responsive.css. */

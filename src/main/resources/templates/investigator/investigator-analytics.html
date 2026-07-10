@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/analytics.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+<script src="/assets/js/investigator.js" defer></script>
+</head>
+<body class="app-shell">
+
+
+<div class="shell">
+  <aside class="sidebar">
+  <div class="brand">MySafeSpeak</div>
+  <div class="group-label">Investigator</div>
+  <a href="investigator-dashboard.html" class="item" style="text-decoration:none;"><span class="dot"></span>Home</a>
+  <a href="investigator-reports.html" class="item" style="text-decoration:none;"><span class="dot"></span>Assigned Reports</a>
+  <a href="investigator-chat.html" class="item" style="text-decoration:none;"><span class="dot"></span>Chat</a>
+  <a href="investigator-notifications.html" class="item" style="text-decoration:none;"><span class="dot"></span>Notifications</a>
+  <a href="investigator-analytics.html" class="item active" style="text-decoration:none;"><span class="dot"></span>Analytics</a>
+  <div class="group-label">Support</div>
+  <a href="investigator-help-center.html" class="item" style="text-decoration:none;"><span class="dot"></span>Help Center</a>
+  <a href="investigator-settings.html" class="item" style="text-decoration:none;"><span class="dot"></span>Settings</a>
+  <div class="spacer"></div>
+  <div class="token-mini">
+    <div class="lbl">Signed in as</div>
+    <div class="val">J. Reyes · Investigator</div>
+  </div>
+</aside>
+
+  <div>
+    <div class="topbar"><h1>Analytics</h1></div>
+    <div class="content">
+
+      <div class="kpi-grid" style="margin-bottom:18px;">
+        <div class="kpi"><div class="val">4.2 days</div><div class="lbl">Avg. resolution time</div></div>
+        <div class="kpi"><div class="val">18</div><div class="lbl">Reports handled (90d)</div></div>
+        <div class="kpi"><div class="val">92%</div><div class="lbl">On-time response rate</div></div>
+      </div>
+
+      <div class="grid-2">
+        <div class="panel">
+          <h2>Reports by category</h2>
+          <div class="bar-row"><div class="lbl">Harassment</div><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><div class="num">7</div></div>
+          <div class="bar-row"><div class="lbl">Fraud</div><div class="bar-track"><div class="bar-fill" style="width:50%"></div></div><div class="num">5</div></div>
+          <div class="bar-row"><div class="lbl">Safety</div><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div><div class="num">3</div></div>
+          <div class="bar-row"><div class="lbl">Data Privacy</div><div class="bar-track"><div class="bar-fill" style="width:20%"></div></div><div class="num">2</div></div>
+          <div class="bar-row"><div class="lbl">Other</div><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><div class="num">1</div></div>
+        </div>
+
+        <div class="panel">
+          <h2>Reports by status</h2>
+          <div class="seg-bar">
+            <div style="width:30%; background:var(--harbor);"></div>
+            <div style="width:20%; background:var(--signal);"></div>
+            <div style="width:15%; background:#7A5FB0;"></div>
+            <div style="width:35%; background:var(--moss);"></div>
+          </div>
+          <div class="legend">
+            <div class="li"><span class="dot" style="background:var(--harbor)"></span>Investigating</div>
+            <div class="li"><span class="dot" style="background:var(--signal)"></span>New</div>
+            <div class="li"><span class="dot" style="background:#7A5FB0"></span>Awaiting response</div>
+            <div class="li"><span class="dot" style="background:var(--moss)"></span>Resolved</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Monthly reports handled</h2>
+        <div class="trend">
+          <div class="col"><div class="bar" style="height:40%"></div><div class="lbl">Jan</div></div>
+          <div class="col"><div class="bar" style="height:55%"></div><div class="lbl">Feb</div></div>
+          <div class="col"><div class="bar" style="height:35%"></div><div class="lbl">Mar</div></div>
+          <div class="col"><div class="bar" style="height:70%"></div><div class="lbl">Apr</div></div>
+          <div class="col"><div class="bar" style="height:60%"></div><div class="lbl">May</div></div>
+          <div class="col"><div class="bar" style="height:90%; background:var(--harbor); border-color:var(--harbor-dark);"></div><div class="lbl">Jun</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* ---- MODAL ----
+   No shared modal/dialog component exists in the app yet — every page
+   currently uses window.confirm()/alert() (see assets/js) instead of an
+   in-page dialog. This file is a placeholder so the modal component has
+   a home as soon as one is built; add reusable .modal / .modal-backdrop
+   styles here rather than duplicating them per page. */

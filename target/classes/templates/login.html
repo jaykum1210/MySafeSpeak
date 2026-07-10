@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — MySafeSpeak</title>
+<link rel="stylesheet" href="/assets/css/base/reset.css">
+<link rel="stylesheet" href="/assets/css/base/variables.css">
+<link rel="stylesheet" href="/assets/css/base/typography.css">
+<link rel="stylesheet" href="/assets/css/base/utilities.css">
+<link rel="stylesheet" href="/assets/css/layout/navbar.css">
+<link rel="stylesheet" href="/assets/css/layout/sidebar.css">
+<link rel="stylesheet" href="/assets/css/layout/dashboard.css">
+<link rel="stylesheet" href="/assets/css/layout/footer.css">
+<link rel="stylesheet" href="/assets/css/layout/forms.css">
+<link rel="stylesheet" href="/assets/css/components/button.css">
+<link rel="stylesheet" href="/assets/css/components/card.css">
+<link rel="stylesheet" href="/assets/css/components/table.css">
+<link rel="stylesheet" href="/assets/css/components/badge.css">
+<link rel="stylesheet" href="/assets/css/components/modal.css">
+<link rel="stylesheet" href="/assets/css/components/alert.css">
+<link rel="stylesheet" href="/assets/css/components/form-controls.css">
+<link rel="stylesheet" href="/assets/css/pages/login.css">
+<link rel="stylesheet" href="/assets/css/base/theme.css">
+<link rel="stylesheet" href="/assets/css/responsive.css">
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/common.js" defer></script>
+</head>
+<body>
+
+
+<div class="split">
+
+  <div class="panel-brand">
+    <div class="brand">MySafeSpeak</div>
+  <div class="msg">
+      <h1>Your identity ends at the login screen.</h1>
+      <p>Once you're in, everything you do — reports, chat, evidence — carries no name, only a token.</p>
+      <div class="redaction-stack" style="margin-top:28px;"><span></span><span></span><span></span></div>
+    </div>
+    <div class="foot">Encrypted in transit and at rest</div>
+  </div>
+
+  <div class="panel-form">
+    <div class="form-shell">
+
+      <!-- Step 1: email + password -->
+      <div class="step active" id="step-1">
+        <div class="eyebrow">Log in</div>
+        <h2>Welcome back</h2>
+        <p class="sub">Use your company email to continue.</p>
+
+        <button class="btn btn-google btn-block" type="button">
+          <span style="font-family:var(--font-mono); font-weight:700;">G</span> Continue with Google
+        </button>
+        <div class="divider">or</div>
+
+        <form onsubmit="event.preventDefault(); handleLogin();">
+          <div class="field">
+            <label>Log in as</label>
+            <select id="login-role" required>
+              <option value="reporter">Reporter</option>
+              <option value="investigator">Investigator</option>
+              <option value="manager">Manager</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Company email</label>
+            <input type="email" placeholder="you@company.com" required>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••••" required>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Continue</button>
+        </form>
+
+        <p class="foot-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+
+      <!-- Step 2: OTP -->
+      <div class="step" id="step-2">
+        <div class="back-link" onclick="loginShowStep(1)">← Back</div>
+        <div class="eyebrow">Verify it's you</div>
+        <h2>Enter your code</h2>
+        <p class="sub">We sent a 6-digit code to <strong>you@company.com</strong>.</p>
+
+        <div class="field">
+          <label>One-time passcode</label>
+          <div class="otp-row">
+            <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+          </div>
+          <div class="helper">Code expires in 10 minutes. <a href="#" onclick="return false" style="color:var(--harbor-dark); font-weight:600;">Resend</a></div>
+        </div>
+
+        <button class="btn btn-primary btn-block" type="button" onclick="completeLogin()">Verify & log in</button>
+      </div>
+
+      <!-- Step 3: success -->
+      <div class="step" id="step-3">
+        <div class="otp-note" id="login-success-note">Verified. Redirecting to your Reporter Dashboard…</div>
+        <h2>You're in</h2>
+        <p class="sub">This is where the dashboard mockup picks up next.</p>
+        <a href="reporter/reporter-dashboard.html" id="login-dashboard-link" class="btn btn-primary btn-block" style="margin-top:16px;">Go to dashboard →</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

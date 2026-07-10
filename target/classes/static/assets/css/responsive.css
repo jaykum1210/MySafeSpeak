@@ -1,0 +1,423 @@
+/* =============================================================
+   MySafeSpeak — Responsive layer
+   =============================================================
+   Desktop-first: every other stylesheet in this project targets
+   the Desktop/Laptop baseline (roughly 1200px–1599px) with no
+   media query of its own. This single file holds every responsive
+   override for the whole app, organized largest → smallest, and
+   must be imported LAST (after base/theme.css) on every page so
+   it can win the cascade.
+
+   Breakpoints:
+     TV             min-width: 1920px
+     Large Desktop  1600px – 1919px
+     Desktop/Laptop 1200px – 1599px (the default/base — no rules here)
+     Tablet         768px  – 1199px
+     Mobile         below 768px
+     Small Mobile   below 400px
+
+   Rules inside each tier are grouped Global → Layout → Components →
+   Pages, mirroring the load order of the files they were moved out
+   of, so cascade/override behavior between a shared rule and a
+   page-specific override is unchanged from before this refactor.
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   ACCESSIBILITY (not a viewport breakpoint, but a media query —
+   moved here from pages/landing.css)
+   ------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  .hv-main, .hv-chat, .hv-token{ animation:none; }
+}
+
+
+/* -------------------------------------------------------------
+   GLOBAL SAFETY NET (applies at every size)
+   Prevents horizontal scrolling anywhere except inside tables,
+   and keeps media/inputs from ever forcing a page wider than the
+   viewport.
+   ------------------------------------------------------------- */
+html { max-width:100%; overflow-x:hidden; }
+body { max-width:100%; }
+img, svg, video{ max-width:100%; height:auto; }
+input, select, textarea{ max-width:100%; }
+pre, code{ max-width:100%; overflow-x:auto; }
+
+/* Hamburger button icon bars (shared by .hamburger-btn and
+   .nav-hamburger-btn, injected by assets/js/common.js) */
+.hamburger-btn span,
+.nav-hamburger-btn span{
+  display:block;
+  width:18px;
+  height:2px;
+  background:currentColor;
+  border-radius:2px;
+}
+.hamburger-btn span + span,
+.nav-hamburger-btn span + span{ margin-top:4px; }
+.nav-hamburger-btn{
+  border:1px solid var(--mist-dark);
+  border-radius:8px;
+  background:var(--surface);
+  color:var(--ink);
+  width:38px;
+  height:38px;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+}
+
+
+/* ===============================================================
+   TV — 1920px and above
+   =============================================================== */
+@media (min-width:1920px){
+  /* Give the page a comfortable read width instead of stretching
+     edge-to-edge; content itself is unchanged. */
+  .wrap{ max-width:1440px; }
+  .content{ padding:44px 56px; }
+  .split .form-shell{ max-width:520px; margin:0 auto; }
+
+  /* Slightly larger type on very large screens, clamped so it
+     never shrinks below the existing desktop size. */
+  .topbar h1{ font-size:clamp(21px, 1.1vw, 26px); }
+  .page-head h1{ font-size:clamp(24px, 1.2vw, 30px); }
+  .hero-copy h1{ font-size:clamp(52px, 3vw, 64px); }
+}
+
+
+/* ===============================================================
+   LARGE DESKTOP — 1600px to 1919px
+   =============================================================== */
+@media (min-width:1600px) and (max-width:1919px){
+  .wrap{ max-width:1280px; }
+  .content{ padding:36px 48px; }
+}
+
+
+/* ===============================================================
+   DESKTOP / LAPTOP — 1200px to 1599px
+   This is the default baseline already defined across the rest of
+   the CSS files — intentionally no overrides here.
+   =============================================================== */
+
+
+/* ===============================================================
+   TABLET — 768px to 1199px
+   =============================================================== */
+@media (max-width:1199px) and (min-width:768px){
+
+  /* ---- Layout: sidebar shell (dashboard-style pages) ----
+     Moved from layout/sidebar.css. The sidebar becomes an
+     off-canvas panel toggled by the hamburger button that
+     assets/js/common.js injects into .topbar. */
+  .shell{ grid-template-columns:1fr; }
+  .sidebar{
+    position:fixed;
+    top:0; left:0;
+    width:240px;
+    max-width:80vw;
+    height:100vh;
+    z-index:1000;
+    transform:translateX(-100%);
+    transition:transform .25s ease;
+    box-shadow:2px 0 24px rgba(0,0,0,.28);
+  }
+  .shell.nav-open .sidebar{ transform:translateX(0); }
+  .hamburger-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    border-radius:8px;
+    border:1px solid var(--mist-dark);
+    background:var(--surface);
+    color:var(--ink);
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .sidebar-backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(10,14,20,.45);
+    z-index:999;
+  }
+  .shell.nav-open .sidebar-backdrop{ display:block; }
+
+  /* ---- Layout: dashboard grids — moved from layout/dashboard.css.
+     This is the shared default for every .shell page; pages that had
+     their own, different tablet column count in the original file
+     (admin/manager/investigator dashboards, admin analytics, the
+     reports pages, the notifications pages) override it below via a
+     body class, since all pages now share this one stylesheet. */
+  .lower-grid{ grid-template-columns:1fr; }
+  .stat-grid{ grid-template-columns:1fr 1fr; }
+  .stat-strip{ grid-template-columns:1fr 1fr; }
+  .grid-2{ grid-template-columns:1fr; }
+
+  /* ---- Layout: auth split-screen shell — moved from layout/forms.css ---- */
+  .split{ grid-template-columns:1fr; }
+  .panel-brand{ display:none; }
+
+  /* ---- Layout: page shell spacing ---- */
+  .content{ padding:24px; }
+  .wrap{ padding:0 24px; }
+
+  /* ---- Components: table — scrollable instead of shrinking ----
+     Moved from admin-users.css, admin-roles-permissions.css,
+     investigator-reports.css, and reports.css (all originally
+     "display:block; overflow-x:auto" on their own table selector).
+     Generalized to every table in the app so no page needs its own
+     copy of this rule any more. */
+  table{
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    white-space:nowrap;
+  }
+
+  /* ---- Pages: admin dashboard (admin-dashboard.css) ---- */
+  body.page-admin-dashboard .stat-grid{ grid-template-columns:repeat(4,1fr); }
+  body.page-admin-dashboard .quick-grid{ grid-template-columns:1fr 1fr; }
+
+  /* ---- Pages: manager dashboard (manager-dashboard.css) ---- */
+  body.page-manager-dashboard .stat-grid{ grid-template-columns:repeat(3,1fr); }
+  body.page-manager-dashboard .quick-grid{ grid-template-columns:1fr; }
+
+  /* ---- Pages: investigator dashboard (investigator-dashboard.css) ---- */
+  body.page-investigator-dashboard .quick-grid{ grid-template-columns:1fr; }
+
+  /* ---- Pages: reports (reports.css, shared by admin/manager reports) ---- */
+  body.page-reports .stat-strip{ grid-template-columns:repeat(4,1fr); }
+
+  /* ---- Pages: notifications (notifications.css, shared by all 4 roles) ---- */
+  body.page-notifications .stat-strip{ grid-template-columns:1fr; }
+  .notif{ flex-wrap:wrap; }
+
+  /* ---- Pages: admin analytics (admin-analytics.css) ---- */
+  body.page-admin-analytics .kpi-grid{ grid-template-columns:1fr 1fr; }
+
+  /* ---- Pages: analytics (analytics.css, shared by reporter/manager/investigator) ---- */
+  .kpi-grid{ grid-template-columns:1fr; }
+
+  /* ---- Pages: admin departments/audit-logs ---- */
+  .dept-grid{ grid-template-columns:1fr; }
+  .log-entry{ grid-template-columns:1fr; gap:4px; }
+
+  /* ---- Pages: report-detail (shared by report-detail.css and
+     investigator-report-detail.css — both used the same values) ---- */
+  .two-col{ grid-template-columns:1fr; }
+  .info-grid{ grid-template-columns:1fr 1fr; }
+  .evidence-grid{ grid-template-columns:1fr 1fr; }
+
+  /* ---- Pages: help-center, my-reports, settings ---- */
+  .cat-grid{ grid-template-columns:1fr 1fr; }
+  .guide-grid{ grid-template-columns:1fr; }
+  .report-row{ flex-direction:column; align-items:flex-start; }
+  .appearance-row{ flex-direction:column; }
+
+  /* ---- Pages: chat (3-column shell → single column) ---- */
+  .chat-list{ display:none; }
+
+  /* ---- Pages: landing ---- */
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-visual{ height:340px; margin-top:20px; }
+  .feat-row, .feat-row.reverse{ grid-template-columns:1fr; }
+  .feat-row.reverse .feat-copy, .feat-row.reverse .feat-visual{ order:0; }
+  .stats-band .grid{ grid-template-columns:1fr 1fr; }
+  .hiw-grid{ grid-template-columns:1fr 1fr; }
+  .hiw-line{ display:none; }
+  .testimonial{ grid-template-columns:1fr; text-align:center; padding:40px 28px; }
+  .testimonial .attrib{ justify-content:center; }
+  .faq-wrap{ grid-template-columns:1fr; }
+
+  /* ---- Typography: clamp() so headings never overflow ---- */
+  .topbar h1{ font-size:clamp(18px, 2vw, 21px); }
+  .page-head h1{ font-size:clamp(20px, 2.2vw, 24px); }
+}
+
+
+/* ===============================================================
+   MOBILE — below 768px
+   =============================================================== */
+@media (max-width:767px){
+
+  /* ---- Layout: sidebar shell (same off-canvas behavior as tablet) ---- */
+  .shell{ grid-template-columns:1fr; }
+  .sidebar{
+    position:fixed;
+    top:0; left:0;
+    width:82vw;
+    max-width:280px;
+    height:100vh;
+    z-index:1000;
+    transform:translateX(-100%);
+    transition:transform .25s ease;
+    box-shadow:2px 0 24px rgba(0,0,0,.28);
+  }
+  .shell.nav-open .sidebar{ transform:translateX(0); }
+  .hamburger-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:36px;
+    height:36px;
+    border-radius:8px;
+    border:1px solid var(--mist-dark);
+    background:var(--surface);
+    color:var(--ink);
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .sidebar-backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(10,14,20,.45);
+    z-index:999;
+  }
+  .shell.nav-open .sidebar-backdrop{ display:block; }
+
+  /* ---- Layout: public site nav (landing page) — moved from layout/navbar.css ---- */
+  .site-nav .bar{ position:relative; padding:14px 20px; }
+  .nav-hamburger-btn{ display:flex; }
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:4px;
+    background:var(--surface);
+    border-bottom:1px solid var(--mist);
+    padding:14px 20px 18px;
+    box-shadow:0 12px 24px rgba(0,0,0,.12);
+    z-index:30;
+  }
+  .nav-links.open{ display:flex; }
+  .nav-links a{ padding:10px 4px; }
+  .nav-cta{ flex-wrap:wrap; gap:8px; }
+
+  /* ---- Layout: footer — moved from layout/footer.css ---- */
+  .site-footer .cols{ grid-template-columns:1fr 1fr; }
+  .site-footer .bottom{ flex-direction:column; gap:8px; text-align:center; }
+
+  /* ---- Layout: dashboard grids — collapse to a single column ---- */
+  .quick-grid,
+  .stat-grid,
+  .stat-strip,
+  .lower-grid,
+  .grid-2,
+  .grid-3,
+  .kpi-grid,
+  .dept-grid{ grid-template-columns:1fr; }
+
+  /* ---- Components: table — scrollable instead of shrinking ----
+     Applies to every table in the app (table.reports/.users/.perm,
+     the design-system demo table, the department-performance table,
+     etc.) so it no longer needs a per-page override. */
+  table{
+    display:block;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    white-space:nowrap;
+  }
+
+  /* ---- Components: forms/buttons — stack and wrap instead of overflowing ---- */
+  .filter-bar{ flex-direction:column; align-items:stretch; gap:10px; }
+  .topbar{ flex-wrap:wrap; gap:12px; }
+  .topbar .actions{ flex-wrap:wrap; gap:8px; }
+  .step-actions, .btn-row{ flex-wrap:wrap; }
+  .cta-band{ flex-direction:column; text-align:center; }
+
+  /* ---- Layout: auth split-screen shell ---- */
+  .split{ grid-template-columns:1fr; }
+  .panel-brand{ display:none; }
+  .form-shell{ padding:32px 20px; }
+
+  /* ---- Layout: page shell spacing ---- */
+  .content{ padding:18px; }
+  .wrap{ padding:0 18px; }
+  .page-head{ margin-bottom:20px; }
+
+  /* ---- Pages: chat ---- */
+  .chat-list{ display:none; }
+  .messages{ padding:18px; }
+  .msg-row{ max-width:85%; }
+  .composer{ padding:12px 16px; }
+  .chat-window-head{ padding:14px 16px; }
+
+  /* ---- Pages: reports/detail pages ---- */
+  .two-col{ grid-template-columns:1fr; }
+  .info-grid{ grid-template-columns:1fr; }
+  .evidence-grid{ grid-template-columns:1fr; }
+  .report-row{ flex-direction:column; align-items:flex-start; }
+  .notif{ flex-wrap:wrap; }
+  .log-entry{ grid-template-columns:1fr; gap:4px; }
+  .appearance-row{ flex-direction:column; }
+  .danger-row{ flex-direction:column; align-items:flex-start; gap:6px; }
+
+  /* ---- Pages: help-center ---- */
+  .cat-grid{ grid-template-columns:1fr; }
+  .guide-grid{ grid-template-columns:1fr; }
+
+  /* ---- Pages: design-system preview ---- */
+  .card-grid{ grid-template-columns:1fr; }
+  .nav-demo{ flex-direction:column; }
+  .nav-demo aside{ width:100%; }
+
+  /* ---- Pages: landing ---- */
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-visual{ height:auto; }
+  .hv-main{ position:static; transform:none; width:100%; }
+  .hv-chat, .hv-token{ display:none; }
+  .feat-row, .feat-row.reverse{ grid-template-columns:1fr; }
+  .feat-row.reverse .feat-copy, .feat-row.reverse .feat-visual{ order:0; }
+  .hiw-grid{ grid-template-columns:1fr; }
+  .hiw-line{ display:none; }
+  .stats-band{ padding:40px 28px; }
+  .stats-band .grid{ grid-template-columns:1fr; }
+  .testimonial{ grid-template-columns:1fr; text-align:center; padding:32px 22px; }
+  .testimonial .attrib{ justify-content:center; }
+  .faq-wrap{ grid-template-columns:1fr; }
+  section.block{ padding:56px 0; }
+  .cta-final{ padding:48px 24px; }
+
+  /* ---- Typography: clamp() so headings scale down gracefully ---- */
+  .hero-copy h1{ font-size:clamp(30px, 8vw, 40px); }
+  .hiw-head h2{ font-size:clamp(24px, 6vw, 32px); }
+  .faq-side h2{ font-size:clamp(22px, 6vw, 30px); }
+  .cta-final h2{ font-size:clamp(24px, 7vw, 34px); }
+  .topbar h1{ font-size:clamp(17px, 4vw, 20px); }
+  .page-head h1{ font-size:clamp(19px, 4.5vw, 23px); }
+  .panel h2{ font-size:clamp(14.5px, 3.5vw, 16px); }
+  .form-shell h2{ font-size:clamp(21px, 5.5vw, 26px); }
+}
+
+
+/* ===============================================================
+   SMALL MOBILE — below 400px
+   =============================================================== */
+@media (max-width:399px){
+  .content{ padding:14px; }
+  .wrap{ padding:0 14px; }
+  .form-shell{ padding:24px 14px; }
+  .sidebar{ width:88vw; max-width:260px; }
+
+  .otp-row{ gap:6px; }
+  .otp-row input{ width:38px; height:44px; font-size:16px; }
+
+  .stat-mini .val{ font-size:19px; }
+  .quick-card, .stat-card, .panel{ padding:16px; }
+  .report-row{ padding:14px; }
+
+  .btn{ padding:11px 16px; font-size:13.5px; }
+
+  .hero-copy h1{ font-size:clamp(26px, 9vw, 32px); }
+  .cta-final h2{ font-size:clamp(21px, 8vw, 27px); }
+  .testimonial blockquote{ font-size:17px; }
+}
